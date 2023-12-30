@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>boleto</title>
+  <title>Pix</title>
   <!-- Adicionar link para o Bootstrap -->
   <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
 </head>
@@ -11,7 +11,7 @@
 <div class="container mt-4">
 
     <h5>Salvar Pix</h5>
-    <form action="/salvar_boleto" method="POST" enctype="multipart/form-data">
+    <form action="/salvar_pix" method="POST" enctype="multipart/form-data">
         @csrf
     <div class="form-group">
       <label for="campo">Pix:</label>

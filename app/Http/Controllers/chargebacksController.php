@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Boletos;
+use App\Models\Chargebacks;
 
-class boletosController extends Controller
+class chargebacksController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class boletosController extends Controller
     public function create()
     {
         //
-        return view('boletos/registar_boleto');
+        return view('chargebacks/registar_chargebacks');
     }
 
     /**
@@ -38,11 +38,10 @@ class boletosController extends Controller
     public function store(Request $request)
     {
         //
-        //return 'teste';
-        $boletos = new Boletos;
-        $boletos->boleto = $request->boleto;
+        $chargebacks = new Chargebacks;
+        $chargebacks->chargeback = $request->chargeback;
 
-        $boletos->save();
+        $chargebacks->save();
 
         return redirect('/')->with('success', 'Boleto salvo com sucesso!');
     }

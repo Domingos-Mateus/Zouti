@@ -3,10 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pixs;
 
-use App\Models\Boletos;
-
-class boletosController extends Controller
+class pixsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +25,7 @@ class boletosController extends Controller
     public function create()
     {
         //
-        return view('boletos/registar_boleto');
+        return view('pix/registar_pix');
     }
 
     /**
@@ -38,11 +37,10 @@ class boletosController extends Controller
     public function store(Request $request)
     {
         //
-        //return 'teste';
-        $boletos = new Boletos;
-        $boletos->boleto = $request->boleto;
+        $pixs = new Pixs;
+        $pixs->pix = $request->pix;
 
-        $boletos->save();
+        $pixs->save();
 
         return redirect('/')->with('success', 'Boleto salvo com sucesso!');
     }

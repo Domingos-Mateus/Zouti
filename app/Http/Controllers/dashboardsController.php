@@ -5,8 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Boletos;
+use App\Models\Chargebacks;
+use App\Models\Pedidos;
+use App\Models\Pixs;
+use App\Models\Tickets;
+use App\Models\Vendas;
 
-class boletosController extends Controller
+
+class dashboardsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -16,6 +22,14 @@ class boletosController extends Controller
     public function index()
     {
         //
+        $boletos = Boletos::count();
+        $chargebacks = Chargebacks::count();
+        $pedidos = Pedidos::count();
+        $pixs = Pixs::count();
+        $tickets = Tickets::count();
+        $vendas = Vendas::count();
+
+        return view('dashboard/dashboard', compact('boletos','chargebacks','pedidos','pixs','tickets','vendas'));
     }
 
     /**
@@ -26,7 +40,6 @@ class boletosController extends Controller
     public function create()
     {
         //
-        return view('boletos/registar_boleto');
     }
 
     /**
@@ -38,13 +51,6 @@ class boletosController extends Controller
     public function store(Request $request)
     {
         //
-        //return 'teste';
-        $boletos = new Boletos;
-        $boletos->boleto = $request->boleto;
-
-        $boletos->save();
-
-        return redirect('/')->with('success', 'Boleto salvo com sucesso!');
     }
 
     /**

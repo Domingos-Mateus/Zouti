@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Boletos;
+use App\Models\Vendas;
 
-class boletosController extends Controller
+
+class vendasController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +27,7 @@ class boletosController extends Controller
     public function create()
     {
         //
-        return view('boletos/registar_boleto');
+        return view('vendas/registar_venda');
     }
 
     /**
@@ -38,13 +39,12 @@ class boletosController extends Controller
     public function store(Request $request)
     {
         //
-        //return 'teste';
-        $boletos = new Boletos;
-        $boletos->boleto = $request->boleto;
+        $vendas = new Vendas;
+        $vendas->venda = $request->venda;
 
-        $boletos->save();
+        $vendas->save();
 
-        return redirect('/')->with('success', 'Boleto salvo com sucesso!');
+        return redirect('/')->with('success', 'Ticket salvo com sucesso!');
     }
 
     /**

@@ -13,7 +13,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
 
-    <title>Vuexy | Vuexy - Bootstrap Admin Template</title>
+    <title>index</title>
 
     <meta name="description" content="" />
 
@@ -57,7 +57,7 @@
               </thead>
               <tbody>
                 <tr>
-                  <td><a href="html/vertical-menu-template/index.html" target="_blank">Vertical Menu Template</a></td>
+                  <td><a href="/dashboard/dashboard">Dashboard</a></td>
                   <td>
                     <a href="html-starter/vertical-menu-template/index.html" target="_blank">Vertical Menu Template</a>
                   </td>
@@ -72,7 +72,7 @@
           <div class="card">
             <h5 class="card-header">Other Important Links</h5>
             <!-- Other Links -->
-           
+
             <!--/ Other Links -->
           </div>
         </div>

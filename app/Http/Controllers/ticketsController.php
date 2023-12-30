@@ -3,10 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Tickets;
 
-use App\Models\Boletos;
 
-class boletosController extends Controller
+class ticketsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class boletosController extends Controller
     public function create()
     {
         //
-        return view('boletos/registar_boleto');
+        return view('tickets/registar_tickets');
     }
 
     /**
@@ -38,13 +38,12 @@ class boletosController extends Controller
     public function store(Request $request)
     {
         //
-        //return 'teste';
-        $boletos = new Boletos;
-        $boletos->boleto = $request->boleto;
+        $tickets = new Tickets;
+        $tickets->ticket = $request->ticket;
 
-        $boletos->save();
+        $tickets->save();
 
-        return redirect('/')->with('success', 'Boleto salvo com sucesso!');
+        return redirect('/')->with('success', 'Ticket salvo com sucesso!');
     }
 
     /**
