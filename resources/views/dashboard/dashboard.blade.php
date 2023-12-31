@@ -1089,8 +1089,6 @@
 
           <!-- / Navbar -->
 
-
-
           <div class="container-xxl flex-grow-1 container-p-y">
             <h4 class="py-3 mb-4"><span class="text-muted fw-light">Logistics /</span> Dashboard</h4>
 
@@ -1150,23 +1148,7 @@
                   </div>
                 </div>
               </div>
-              <div class="col-sm-6 col-lg-3 mb-4">
-                <div class="card card-border-shadow-info">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-2 pb-1">
-                      <div class="avatar me-2">
-                        <span class="avatar-initial rounded bg-label-info"><i class="ti ti-clock ti-md"></i></span>
-                      </div>
-                      <h4 class="ms-1 mb-0">13</h4>
-                    </div>
-                    <p class="mb-1">Late vehicles</p>
-                    <p class="mb-0">
-                      <span class="fw-medium me-1">-2.5%</span>
-                      <small class="text-muted">than last week</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
+
             </div>
             <!--/ Card Border Shadow -->
 
@@ -1276,7 +1258,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="primary"
-                            data-series="72"
+                            data-series="{{$boletos}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -1296,7 +1278,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="success"
-                            data-series="10"
+                            data-series="{{$pixs}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -1316,7 +1298,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="danger"
-                            data-series="15"
+                            data-series="{{$chargebacks}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -1336,7 +1318,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="info"
-                            data-series="24"
+                            data-series="{{$chargebacks}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -1380,12 +1362,7 @@
                         <i class="ti ti-calendar"></i>
                       </button>
                       <ul class="dropdown-menu dropdown-menu-end">
-                        <li>
-                          <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a>
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Yesterday</a>
-                        </li>
+
                         <li>
                           <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
                             >Last 7 Days</a
