@@ -57,6 +57,15 @@
     <script src="../../assets/vendor/js/template-customizer.js"></script>
     <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
     <script src="../../assets/js/config.js"></script>
+
+    <style type="text/css">
+        @media (max-width: 1199px) {
+          .d-flex-flex {
+            display: flex;
+            justify-content: center;
+          }
+        }
+    </style>
   </head>
 
   <body>
@@ -66,7 +75,7 @@
         <!-- Menu -->
 
         <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
-          <div class="app-brand demo">
+          <div class="app-brand demo d-none">
             <a href="index.html" class="app-brand-link">
               <span class="app-brand-logo demo">
                 <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -115,7 +124,8 @@
               <ul class="menu-sub">
                 <li class="menu-item active">
                   <a href="index.html" class="menu-link">
-                    <div data-i18n="Analytics">Analytics</div>
+                    <i class="menu-icon tf-icons ti ti-components"></i>
+                    <div data-i18n="Analytics">Início</div>
                   </a>
                 </li>
                 <li class="menu-item">
@@ -593,409 +603,40 @@
 
             <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
               <!-- Search -->
-              <div class="navbar-nav align-items-center">
-                <div class="nav-item navbar-search-wrapper mb-0">
-                  <a class="nav-item nav-link search-toggler d-flex align-items-center px-0" href="javascript:void(0);">
-                    <i class="ti ti-search ti-md me-2"></i>
-                    <span class="d-none d-md-inline-block text-muted">Search (Ctrl+/)</span>
-                  </a>
-                </div>
+              <div class="col-8 d-flex-flex">
+                <a href="index.html" class="app-brand-link">
+              <span class="app-brand-logo demo">
+                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
+                    fill="#7367F0" />
+                  <path
+                    opacity="0.06"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
+                    fill="#161616" />
+                  <path
+                    opacity="0.06"
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
+                    fill="#161616" />
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
+                    fill="#7367F0" />
+                </svg>
+              </span>
+              <span class="app-brand-text demo menu-text fw-bold">ZOUTI</span>
+            </a>
               </div>
               <!-- /Search -->
 
               <ul class="navbar-nav flex-row align-items-center ms-auto">
-                <!-- Language -->
-                <li class="nav-item dropdown-language dropdown me-2 me-xl-0">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <i class="ti ti-language rounded-circle ti-md"></i>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="en">
-                        <span class="align-middle">English</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="fr">
-                        <span class="align-middle">French</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="de">
-                        <span class="align-middle">German</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-language="pt">
-                        <span class="align-middle">Portuguese</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ Language -->
-
-                <!-- Style Switcher -->
-                <li class="nav-item dropdown-style-switcher dropdown me-2 me-xl-0">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <i class="ti ti-md"></i>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end dropdown-styles">
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-theme="light">
-                        <span class="align-middle"><i class="ti ti-sun me-2"></i>Light</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-theme="dark">
-                        <span class="align-middle"><i class="ti ti-moon me-2"></i>Dark</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="javascript:void(0);" data-theme="system">
-                        <span class="align-middle"><i class="ti ti-device-desktop me-2"></i>System</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!-- / Style Switcher-->
-
-                <!-- Quick links  -->
-                <li class="nav-item dropdown-shortcuts navbar-dropdown dropdown me-2 me-xl-0">
-                  <a
-                    class="nav-link dropdown-toggle hide-arrow"
-                    href="javascript:void(0);"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    aria-expanded="false">
-                    <i class="ti ti-layout-grid-add ti-md"></i>
-                  </a>
-                  <div class="dropdown-menu dropdown-menu-end py-0">
-                    <div class="dropdown-menu-header border-bottom">
-                      <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">Shortcuts</h5>
-                        <a
-                          href="javascript:void(0)"
-                          class="dropdown-shortcuts-add text-body"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Add shortcuts"
-                          ><i class="ti ti-sm ti-apps"></i
-                        ></a>
-                      </div>
-                    </div>
-                    <div class="dropdown-shortcuts-list scrollable-container">
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-calendar fs-4"></i>
-                          </span>
-                          <a href="app-calendar.html" class="stretched-link">Calendar</a>
-                          <small class="text-muted mb-0">Appointments</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-file-invoice fs-4"></i>
-                          </span>
-                          <a href="app-invoice-list.html" class="stretched-link">Invoice App</a>
-                          <small class="text-muted mb-0">Manage Accounts</small>
-                        </div>
-                      </div>
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-users fs-4"></i>
-                          </span>
-                          <a href="app-user-list.html" class="stretched-link">User App</a>
-                          <small class="text-muted mb-0">Manage Users</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-lock fs-4"></i>
-                          </span>
-                          <a href="app-access-roles.html" class="stretched-link">Role Management</a>
-                          <small class="text-muted mb-0">Permission</small>
-                        </div>
-                      </div>
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-chart-bar fs-4"></i>
-                          </span>
-                          <a href="index.html" class="stretched-link">Dashboard</a>
-                          <small class="text-muted mb-0">User Profile</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-settings fs-4"></i>
-                          </span>
-                          <a href="pages-account-settings-account.html" class="stretched-link">Setting</a>
-                          <small class="text-muted mb-0">Account Settings</small>
-                        </div>
-                      </div>
-                      <div class="row row-bordered overflow-visible g-0">
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-help fs-4"></i>
-                          </span>
-                          <a href="pages-faq.html" class="stretched-link">FAQs</a>
-                          <small class="text-muted mb-0">FAQs & Articles</small>
-                        </div>
-                        <div class="dropdown-shortcuts-item col">
-                          <span class="dropdown-shortcuts-icon rounded-circle mb-2">
-                            <i class="ti ti-square fs-4"></i>
-                          </span>
-                          <a href="modal-examples.html" class="stretched-link">Modals</a>
-                          <small class="text-muted mb-0">Useful Popups</small>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </li>
-                <!-- Quick links -->
-
-                <!-- Notification -->
-                <li class="nav-item dropdown-notifications navbar-dropdown dropdown me-3 me-xl-1">
-                  <a
-                    class="nav-link dropdown-toggle hide-arrow"
-                    href="javascript:void(0);"
-                    data-bs-toggle="dropdown"
-                    data-bs-auto-close="outside"
-                    aria-expanded="false">
-                    <i class="ti ti-bell ti-md"></i>
-                    <span class="badge bg-danger rounded-pill badge-notifications">5</span>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end py-0">
-                    <li class="dropdown-menu-header border-bottom">
-                      <div class="dropdown-header d-flex align-items-center py-3">
-                        <h5 class="text-body mb-0 me-auto">Notification</h5>
-                        <a
-                          href="javascript:void(0)"
-                          class="dropdown-notifications-all text-body"
-                          data-bs-toggle="tooltip"
-                          data-bs-placement="top"
-                          title="Mark all as read"
-                          ><i class="ti ti-mail-opened fs-4"></i
-                        ></a>
-                      </div>
-                    </li>
-                    <li class="dropdown-notifications-list scrollable-container">
-                      <ul class="list-group list-group-flush">
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Congratulation Lettie 🎉</h6>
-                              <p class="mb-0">Won the monthly best seller gold badge</p>
-                              <small class="text-muted">1h ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-danger">CF</span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Charles Franklin</h6>
-                              <p class="mb-0">Accepted your connection</p>
-                              <small class="text-muted">12hr ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/2.png" alt class="h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">New Message ✉️</h6>
-                              <p class="mb-0">You have new message from Natalie</p>
-                              <small class="text-muted">1h ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-success"
-                                  ><i class="ti ti-shopping-cart"></i
-                                ></span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Whoo! You have new order 🛒</h6>
-                              <p class="mb-0">ACME Inc. made new order $1,154</p>
-                              <small class="text-muted">1 day ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/9.png" alt class="h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Application has been approved 🚀</h6>
-                              <p class="mb-0">Your ABC project application has been approved.</p>
-                              <small class="text-muted">2 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-success"
-                                  ><i class="ti ti-chart-pie"></i
-                                ></span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Monthly report is generated</h6>
-                              <p class="mb-0">July monthly financial report is generated</p>
-                              <small class="text-muted">3 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/5.png" alt class="h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">Send connection request</h6>
-                              <p class="mb-0">Peter sent you connection request</p>
-                              <small class="text-muted">4 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <img src="../../assets/img/avatars/6.png" alt class="h-auto rounded-circle" />
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">New message from Jane</h6>
-                              <p class="mb-0">Your have new message from Jane</p>
-                              <small class="text-muted">5 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                        <li class="list-group-item list-group-item-action dropdown-notifications-item marked-as-read">
-                          <div class="d-flex">
-                            <div class="flex-shrink-0 me-3">
-                              <div class="avatar">
-                                <span class="avatar-initial rounded-circle bg-label-warning"
-                                  ><i class="ti ti-alert-triangle"></i
-                                ></span>
-                              </div>
-                            </div>
-                            <div class="flex-grow-1">
-                              <h6 class="mb-1">CPU is running high</h6>
-                              <p class="mb-0">CPU Utilization Percent is currently at 88.63%,</p>
-                              <small class="text-muted">5 days ago</small>
-                            </div>
-                            <div class="flex-shrink-0 dropdown-notifications-actions">
-                              <a href="javascript:void(0)" class="dropdown-notifications-read"
-                                ><span class="badge badge-dot"></span
-                              ></a>
-                              <a href="javascript:void(0)" class="dropdown-notifications-archive"
-                                ><span class="ti ti-x"></span
-                              ></a>
-                            </div>
-                          </div>
-                        </li>
-                      </ul>
-                    </li>
-                    <li class="dropdown-menu-footer border-top">
-                      <a
-                        href="javascript:void(0);"
-                        class="dropdown-item d-flex justify-content-center text-primary p-2 h-px-40 mb-1 align-items-center">
-                        View all notifications
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ Notification -->
 
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
@@ -1073,124 +714,127 @@
                   </ul>
                 </li>
                 <!--/ User -->
+                <li>
+                  <span class="d-none d-md-inline d-lg-inline">
+                    Nome Complento do user
+                  </span>
+                </li>
               </ul>
             </div>
 
             <!-- Search Small Screens -->
             <div class="navbar-search-wrapper search-input-wrapper d-none">
-              <input
-                type="text"
-                class="form-control search-input container-xxl border-0"
-                placeholder="Search..."
-                aria-label="Search..." />
-              <i class="ti ti-x ti-sm search-toggler cursor-pointer"></i>
+              logo
             </div>
           </nav>
-
           <!-- / Navbar -->
 
-          <div class="container-xxl flex-grow-1 container-p-y">
-            <h4 class="py-3 mb-4"><span class="text-muted fw-light">Logistics /</span> Dashboard</h4>
+          <br><br>
 
-            <!-- Card Border Shadow -->
-            <div class="row">
-              <div class="col-sm-6 col-lg-3 mb-4">
-                <div class="card card-border-shadow-primary">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-2 pb-1">
-                      <div class="avatar me-2">
-                        <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-md"></i></span>
-                      </div>
-                      <h4 class="ms-1 mb-0">Total de Vendas</h4>
-                    </div>
-
-                    <p class="mb-0">
-                      <small class="text-muted">R$ 111.278,77</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3 mb-4">
-                <div class="card card-border-shadow-warning">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-2 pb-1">
-                      <div class="avatar me-2">
-                        <span class="avatar-initial rounded bg-label-warning"
-                          ><i class="ti ti-alert-triangle ti-md"></i
-                        ></span>
-                      </div>
-                      <h4 class="ms-1 mb-0">Pedidos Pagos</h4>
-                    </div>
-                    <p class="mb-1">Vehicles with errors</p>
-                    <p class="mb-0">
-                      <span class="fw-medium me-1">-8.7%</span>
-                      <small class="text-muted">than last week</small>
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <div class="col-sm-6 col-lg-3 mb-4">
-                <div class="card card-border-shadow-danger">
-                  <div class="card-body">
-                    <div class="d-flex align-items-center mb-2 pb-1">
-                      <div class="avatar me-2">
-                        <span class="avatar-initial rounded bg-label-danger"
-                          ><i class="ti ti-git-fork ti-md"></i
-                        ></span>
-                      </div>
-                      <h4 class="ms-1 mb-0">27</h4>
-                    </div>
-                    <p class="mb-1">Tíckets Médios</p>
-                    <p class="mb-0">
-                      <span class="fw-medium me-1">R$ 139,62</span>
-                      <small class="text-muted">than last week</small>
-                    </p>
-                  </div>
-                </div>
+          <div class="">
+            <div class="row px-4 m-0">
+              <div class="col-12 col-md-6 col-lg-6">
+                <h3 class="m-0">
+                  Dashboard
+                </h3>
               </div>
 
+               <div class="col-12 col-md-6 col-lg-6">
+                 <div class="invisible">
+                   Vazio
+                 </div>
+              </div>
             </div>
-            <!--/ Card Border Shadow -->
+          </div>
+
+
+          <div class="container-xxl flex-grow-1 container-p-y">
+
 
           <!-- Content wrapper -->
           <div class="content-wrapper">
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y">
-              <div class="row">
-
-
-
-                <!-- Revenue Generated -->
-                <div class="col-md-12 mb-4">
-                  <div class="card">
-                    <div class="card-body pb-0">
-                      <div class="card-icon">
-                        <span class="badge bg-label-success rounded-pill p-2">
-                          <i class="ti ti-credit-card ti-sm"></i>
-                        </span>
+             <div class="row">
+            <div class="col-12 col-lg-8">
+              <div class="row m-0 p-0">
+              <div class="col-sm-6 col-lg-4 mb-4 px-1">
+                <div class="card card-border-shadow-primary">
+                  <div class="card-body">
+                    <!-- <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="avatar me-2">
+                        <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-md"></i></span>
                       </div>
-                      <h5 class="card-title mb-0 mt-2">97.5k</h5>
-                      <small>Revenue Generated</small>
-                    </div>
-                    <div id="revenueGenerated"></div>
+                      <h4 class="ms-1 mb-0">42</h4>
+                    </div> -->
+                    <p class="mb-1">Total em vendas</p>
+                    <p class="mb-0">
+                      <span class="fw-medium me-1">
+                      <b>R$ 1000000000
+                        <span>
+                          <img src="../../assets/seta-verde.png" width="28" class="rotate">
+                        </span>
+                      </b>
+                    </span>
+                      <!-- <small class="text-muted">than last week</small> -->
+                    </p>
                   </div>
                 </div>
-                <!--/ Revenue Generated -->
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-4 px-1">
+                <div class="card card-border-shadow-primary">
+                  <div class="card-body">
+                    <!-- <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="avatar me-2">
+                        <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-md"></i></span>
+                      </div>
+                      <h4 class="ms-1 mb-0">42</h4>
+                    </div> -->
+                    <p class="mb-1">Total em vendas</p>
+                    <p class="mb-0">
+                      <span class="fw-medium me-1">
+                      <b>R$ 1000000000
+                        <span>
+                          <img src="../../assets/seta-verde.png" width="28" class="rotate">
+                        </span>
+                      </b>
+                    </span>
+                      <!-- <small class="text-muted">than last week</small> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col-sm-6 col-lg-4 mb-4 px-1">
+                <div class="card card-border-shadow-primary">
+                  <div class="card-body">
+                    <!-- <div class="d-flex align-items-center mb-2 pb-1">
+                      <div class="avatar me-2">
+                        <span class="avatar-initial rounded bg-label-primary"><i class="ti ti-truck ti-md"></i></span>
+                      </div>
+                      <h4 class="ms-1 mb-0">42</h4>
+                    </div> -->
+                    <p class="mb-1">Total em vendas</p>
+                    <p class="mb-0">
+                      <span class="fw-medium me-1">
+                      <b>R$ 1000000000
+                        <span>
+                          <img src="../../assets/seta-verde.png" width="28" class="rotate">
+                        </span>
+                      </b>
+                    </span>
+                      <!-- <small class="text-muted">than last week</small> -->
+                    </p>
+                  </div>
+                </div>
+              </div>
 
-
-
-<!--Testando o gráfico do menu gráfico-->
-
-
-                <div class="row">
-                  <!-- Line Area Chart -->
-                  <div class="col-12 mb-4">
-                    <div class="card">
+              <!-- Grafico de Area -->
+              <div class="card">
                       <div class="card-header d-flex justify-content-between">
                         <div>
                           <h5 class="card-title mb-0">Vendas por dia</h5>
-                          <small class="text-muted">Acompanhe o volume diário da sua venda</small>
+                          <small class="text-muted">Acompanhe o volume diario da sua empresa</small>
                         </div>
                         <div class="dropdown">
                           <button
@@ -1235,22 +879,25 @@
                         <div id="lineAreaChart"></div>
                       </div>
                     </div>
-                  </div>
-
-
+            </div>
+            </div>
+            <div class="col-12 col-lg-4 mt-3 mt-lg-0">
+              <div class="m-0 p-0 mb-3">
+                  <div class="d-flex-flex">
+                    <div class="col-12">
+                      <select class="form-select">
+                        <option value="2023-12-31_2024-01-06">Dec 31, 2023 – Jan 6, 2024</option>
+                      </select>
+                    </div>
                   </div>
                 </div>
-                <!--/ Sales By Country -->
-
-
-
-                <!--Colocando outro gráfico vindo da app-academy-dashboard-->
-
-
-                <div class="col-12 col-xl-4 col-md-6">
-                  <div class="card h-100">
+              <div class="">
+                <div class="card h-100">
                     <div class="card-header d-flex align-items-center justify-content-between">
-                      <h4 class="card-title m-0 me-2">Índices</h4>
+                      <div>
+                        <h5 class="m-0">Indices</h5>
+                        <p>Boletos, PIX e Chargebaks</p>
+                      </div>
                     </div>
                     <div class="card-body">
                       <ul class="p-0 m-0">
@@ -1258,7 +905,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="primary"
-                            data-series="{{$boletos}}"
+                            data-series="72"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -1278,7 +925,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="success"
-                            data-series="{{$pixs}}"
+                            data-series="48"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -1298,13 +945,13 @@
                           <div
                             class="chart-progress me-3"
                             data-color="danger"
-                            data-series="{{$chargebacks}}"
+                            data-series="15"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
                               <div class="me-2">
-                                <h6 class="mb-2">Chargebacks</h6>
-                                <small>Conversão</small>
+                                <h6 class="mb-2">Chargebaks</h6>
+                                <small>0 neste período</small>
                               </div>
                             </div>
                             <div class="col-3 text-end">
@@ -1318,13 +965,13 @@
                           <div
                             class="chart-progress me-3"
                             data-color="info"
-                            data-series="{{$chargebacks}}"
+                            data-series="24"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
                               <div class="me-2">
-                                <h6 class="mb-2">Pré-Chargebacks</h6>
-                                <small>Conversão</small>
+                                <h6 class="mb-2">Pré-Chargebaks</h6>
+                                <small>3 neste período</small>
                               </div>
                             </div>
                             <div class="col-3 text-end">
@@ -1337,62 +984,70 @@
                       </ul>
                     </div>
                   </div>
-                </div>
+
+                  <br>
+
+                  <div class="card">
+                    <div class="card-header header-elements">
+                      <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">Parecelas no Cartao</h5>
+                        <p class="card-subtitle text-muted mb-1">Numero de transaçoes</p>
+                      </div>
+                      <div class="card-action-element ms-auto py-0">
+                        <div class="dropdown">
+                          <button
+                            type="button"
+                            class="btn dropdown-toggle px-0"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ti ti-calendar"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Yesterday</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last 7 Days</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last 30 Days</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Current Month</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last Month</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="horizontalBarChart" class="chartjs" data-height="400"></canvas>
+                    </div>
+                  </div>
+              </div>
+            </div>
+          </div>
+
               </div>
               <!--  Topic and Instructors  End-->
-
-
-
-
-
-               <!-- Bar Chart -->
-               <div class="col-md-6 col-12 mb-4">
-                <div class="card">
-                  <div class="card-header d-flex justify-content-between align-items-center">
-                    <div>
-                        <h5 class="card-title mb-0">Parcelas no Cartão</h5>
-                      <p class="card-subtitle text-muted mb-1">Números de Transações</p>
-                    </div>
-                    <div class="dropdown">
-                      <button
-                        type="button"
-                        class="btn dropdown-toggle px-0"
-                        data-bs-toggle="dropdown"
-                        aria-expanded="false">
-                        <i class="ti ti-calendar"></i>
-                      </button>
-                      <ul class="dropdown-menu dropdown-menu-end">
-
-                        <li>
-                          <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                            >Last 7 Days</a
-                          >
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                            >Last 30 Days</a
-                          >
-                        </li>
-                        <li>
-                          <hr class="dropdown-divider" />
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                            >Current Month</a
-                          >
-                        </li>
-                        <li>
-                          <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last Month</a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div class="card-body">
-                    <div id="horizontalBarChart"></div>
-                  </div>
-                </div>
-              </div>
-              <!-- /Bar Chart -->
 
 
 
@@ -1540,5 +1195,14 @@
 
     <!-- Page JS -->
     <script src="../../assets/js/dashboards-analytics.js"></script>
+
+    <!-- Vendors JS -->
+    <script src="../../assets/vendor/libs/chartjs/chartjs.js"></script>
+
+    <!-- Main JS -->
+    <script src="../../assets/js/main.js"></script>
+
+    <!-- Page JS -->
+    <script src="../../assets/js/charts-chartjs.js"></script>
   </body>
 </html>

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePixsTable extends Migration
+class CreateOrdensTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,14 @@ class CreatePixsTable extends Migration
      */
     public function up()
     {
-        Schema::create('pixs', function (Blueprint $table) {
+        Schema::create('ordens', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('pix',100);
+            $table->string('produto',100);
+            $table->string('valor_produto',100);
+            $table->string('quantidade_pedidos_pix');
+            $table->string('quantidade_pedidos_cartao');
+            $table->boolean('variacao_parcela');
+            $table->string('genero_cliente');
             $table->timestamps();
         });
     }
@@ -27,6 +32,6 @@ class CreatePixsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pixs');
+        Schema::dropIfExists('ordens');
     }
 }

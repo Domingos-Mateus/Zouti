@@ -130,10 +130,10 @@
     const horizontalBarChartVar = new Chart(horizontalBarChart, {
       type: 'bar',
       data: {
-        labels: ['MON', 'TUE', 'WED ', 'THU', 'FRI', 'SAT', 'SUN'],
+        labels: ['1x', '2x', '3x ', '4x', '5x'],
         datasets: [
           {
-            data: [710, 350, 470, 580, 230, 460, 120],
+            data: [710, 350, 470, 580, 230],
             backgroundColor: config.colors.info,
             borderColor: 'transparent',
             maxBarThickness: 15

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Boletos;
+use App\Models\Ordens;
 
-class boletosController extends Controller
+class ordensController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class boletosController extends Controller
     public function create()
     {
         //
-        return view('boletos/registar_boleto');
+        return view('ordens/registar_ordem');
     }
 
     /**
@@ -38,12 +38,17 @@ class boletosController extends Controller
     public function store(Request $request)
     {
         //
-        $boletos = new Boletos;
-        $boletos->boleto = $request->boleto;
+        $ordens = new Ordens;
+        $ordens->produto = $request->produto;
+        $ordens->valor_produto = $request->valor_produto;
+        $ordens->quantidade_pedidos_pix = $request->quantidade_pedidos_pix;
+        $ordens->quantidade_pedidos_cartao = $request->quantidade_pedidos_cartao;
+        $ordens->variacao_parcela = $request->variacao_parcela;
+        $ordens->genero_cliente = $request->genero_cliente;
 
-        $boletos->save();
+        $ordens->save();
 
-        return redirect('/')->with('success', 'Boleto salvo com sucesso!');
+        return redirect('/')->with('success', 'cliente salvo com sucesso!');
     }
 
     /**

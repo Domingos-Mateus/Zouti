@@ -43,6 +43,15 @@ Route::get('/vendas/registar_venda', 'App\Http\Controllers\vendasController@crea
 Route::post('/salvar_venda', 'App\Http\Controllers\vendasController@store');
 
 
+//Cliente
+Route::get('/clientes/registar_cliente', 'App\Http\Controllers\clientesController@create');
+Route::post('/salvar_cliente', 'App\Http\Controllers\clientesController@store');
+
+//Ordem
+Route::get('/ordens/registar_ordem', 'App\Http\Controllers\ordensController@create');
+Route::post('/salvar_ordem', 'App\Http\Controllers\ordensController@store');
+
+//Rota Para Dashboard
 Route::get('/dashboard/dashboard', 'App\Http\Controllers\dashboardsController@index');
 
 

@@ -4,9 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-use App\Models\Boletos;
+use App\Models\Clientes;
 
-class boletosController extends Controller
+class clientesController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -26,7 +26,7 @@ class boletosController extends Controller
     public function create()
     {
         //
-        return view('boletos/registar_boleto');
+        return view('clientes/registar_cliente');
     }
 
     /**
@@ -38,12 +38,14 @@ class boletosController extends Controller
     public function store(Request $request)
     {
         //
-        $boletos = new Boletos;
-        $boletos->boleto = $request->boleto;
+        $clientes = new Clientes;
+        $clientes->abreviacao = $request->abreviacao;
+        $clientes->nome = $request->nome;
+        $clientes->sexo = $request->sexo;
 
-        $boletos->save();
+        $clientes->save();
 
-        return redirect('/')->with('success', 'Boleto salvo com sucesso!');
+        return redirect('/')->with('success', 'cliente salvo com sucesso!');
     }
 
     /**
