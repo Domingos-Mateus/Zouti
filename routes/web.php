@@ -51,6 +51,11 @@ Route::post('/salvar_cliente', 'App\Http\Controllers\clientesController@store');
 Route::get('/ordens/registar_ordem', 'App\Http\Controllers\ordensController@create');
 Route::post('/salvar_ordem', 'App\Http\Controllers\ordensController@store');
 
+
+//Transações
+Route::get('/dashboard/transacoes', 'App\Http\Controllers\transacoesController@create');
+
+
 //Rota Para Dashboard
 Route::get('/dashboard/dashboard', 'App\Http\Controllers\dashboardsController@index');
 

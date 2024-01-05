@@ -323,7 +323,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="primary"
-                            data-series="72"
+                            data-series="{{$boletos}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -343,7 +343,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="success"
-                            data-series="48"
+                            data-series="{{$pixs}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -363,7 +363,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="danger"
-                            data-series="15"
+                            data-series="{{$chargebacks}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -383,7 +383,7 @@
                           <div
                             class="chart-progress me-3"
                             data-color="info"
-                            data-series="24"
+                            data-series="{{$chargebacks}}"
                             data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
