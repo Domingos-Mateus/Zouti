@@ -55,6 +55,9 @@ Route::post('/salvar_ordem', 'App\Http\Controllers\ordensController@store');
 //Transações
 Route::get('/dashboard/transacoes', 'App\Http\Controllers\transacoesController@create');
 
+//taxas
+Route::get('/dashboard/taxas', 'App\Http\Controllers\taxaController@create');
+
 
 //Rota Para Dashboard
 Route::get('/dashboard/dashboard', 'App\Http\Controllers\dashboardsController@index');

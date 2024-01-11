@@ -728,30 +728,6 @@
           </nav>
           <!-- / Navbar -->
 
-          <br><br>
-
-          <div class="">
-            <div class="row px-4 m-0">
-              <div class="col-12 col-md-6 col-lg-6 mt-2">
-                <p class="m-0">
-                  <span style="font-size: 22px; font-weight: bold;">
-                    Transaçoes
-                  </span> <span style="font-size: 15px;">2.369 Registos</span>
-                </p>
-              </div>
-
-               <div class="col-12 col-md-6 col-lg-6 d-lg-flex justify-content-end mt-2">
-                 <div>
-                  <button class="col-12 btn btn-primary">
-                    Criar transaçao manual
-                  </button>
-                 </div>
-              </div>
-            </div>
-          </div>
-
-
-
           <div class="container-xxl flex-grow-1 container-p-y">
 
 
@@ -760,155 +736,153 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y p-0 m-0">
-
-            <!-- Basic Bootstrap Table -->
-              <div class="table-responsive">
-                <table class="table">
-                  <tr>
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Transaçao
-                          </option>
-                        </select>
+              <div class="col-12 mb-2 order-1 order-xxl-3">
+                <div class="card h-100" style="border-radius: 30px; background-color: orange;">
+                  <div class="card-header d-flex align-items-center justify-content-between position-relative">
+                    <div>
+                      <div class="row">
+                          <h4 class="m-0">Pagamentos</h4>
+                          <h4>e Taxas</h4>
                       </div>
-                    </td>
-
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Cliente
-                          </option>
-                        </select>
+                      <div>
+                        <button class="btn" style="border: 1px solid #000;">
+                          Veja Abaixo
+                        </button>
                       </div>
-                    </td>
+                    </div>
 
-                    <td>
-                      <div style="width: 210px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Forma de Pagamento
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Status
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Parcelas
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Entrega
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-
-              <br>
-
-              <div class="card">
-                <div class="table-responsive text-nowrap">
-                  <table class="table">
-                    <thead>
-                      <tr>
-                        <th>CLIENTE</th>
-                        <th>FORMA DE PAGAMENTO</th>
-                        <th>STATUS</th>
-                        <th>PRODUTO</th>
-                        <th>DATA DA TRANSAÇAO</th>
-                        <th>DATA DE PAGAMENTO</th>
-                        <th>Actions</th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0">
-                      <tr>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
-                              AL
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">Alexandre Gonsalves Pinheiro</p>
-                              <p class="m-0" style="font-size: 13px;">alexandrepinheiro@gmail.com</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-block; width: 40px; height: 40px;">
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">
-                                R$ 123,48
-                              </p>
-                              <p class="m-0" style="font-size: 13px;">
-                                Vence em 24/12
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
-                        <td>
-                          <div style="display: inline-block;">
-                            <p class="m-0" style="font-weight: bold;">
-                              KIT COM 3 PARES - TENIS
-                            </p>
-                            <p class="m-0" style="font-size: 13px;">
-                              R$ 123,48
-                            </p>
-                          </div>
-                        </td>
-                        <td>
-                          22 de dez. 00:10
-                        </td>
-                        <td>
-                          ha 2 semanas
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="ti ti-dots-vertical"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-pencil me-1"></i> Edit</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-trash me-1"></i> Delete</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+                    <div style="position: absolute; top: 50%; right: 30px;">
+                      <h3>ZoutiPay</h3>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <!--/ Basic Bootstrap Table -->
+
+              <div >
+                <h5 class="m-0 py-4">Meios de Pagamento</h5>
+              </div>
+
+              <div class="row">
+                 <div class="col-md-6 col-xxl-4 mb-4 order-1 order-xxl-3">
+                  <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <div>
+                        <div class="row">
+                          <div class="col-8">
+                            <h5>Boletos</h5>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            image
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-8 pt-2">
+                            <span style="font-weight: bold;">R$ 3,49</span>
+                            <span>/boleto</span>
+                          </div>
+                          <div class="col-4">
+                            <div class="bg-dark rounded-3 text-center py-2" style="color: #fff;">
+                              Disponivel
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xxl-4 mb-4 order-1 order-xxl-3">
+                  <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <div>
+                        <div class="row">
+                          <div class="col-8">
+                            <h5>Boletos</h5>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            image
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-8 pt-2">
+                            <span style="font-weight: bold;">5,19% + R$ 3,49</span>
+                            <span>/transaçao</span>
+                          </div>
+                          <div class="col-4">
+                            <div class="bg-dark rounded-3 text-center py-2" style="color: #fff;">
+                              Disponivel
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xxl-4 mb-4 order-1 order-xxl-3">
+                  <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <div>
+                        <div class="row">
+                          <div class="col-8">
+                            <h5>Boletos</h5>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            image
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-8 pt-2">
+                            <span style="font-weight: bold;">0,98%</span>
+                            <span>/transaçao</span>
+                          </div>
+                          <div class="col-4">
+                            <div class="bg-dark rounded-3 text-center py-2" style="color: #fff;">
+                              Disponivel
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-xxl-4 mb-4 order-1 order-xxl-3">
+                  <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <div>
+                        <div class="row">
+                          <div class="col-8">
+                            <h5>Boletos</h5>
+                            <p>
+                              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                              tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam
+                            </p>
+                          </div>
+                          <div class="col-4">
+                            image
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
 
             </div>
             <!--  Topic and Instructors  End-->

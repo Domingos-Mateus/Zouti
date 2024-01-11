@@ -42,7 +42,7 @@
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
       <li class="menu-item active open">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <a href="/dashboard/taxas" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons ti ti-smart-home"></i>
           <div data-i18n="+ Saldo Disponível">+ Saldo Disponível</div>
           <div data-i18n="R$ -440,00">R$ -440,00</div>
@@ -55,7 +55,7 @@
 
 
       <!-- Cards -->
-      <a href="/dashboard/transacoes" >
+      <a href="/dashboard/taxas" >
       <li class="menu-item">
         <i class="menu-icon tf-icons ti ti-smart-home"></i>
           <div data-i18n="Transações">Transações</div>
