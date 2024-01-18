@@ -134,7 +134,7 @@
                 <!--/ User -->
                 <li>
                   <span class="d-none d-md-inline d-lg-inline">
-                    Nome Complento do user
+                    {{ Auth::user()->name }}
                   </span>
                 </li>
               </ul>
@@ -196,11 +196,12 @@
 
                     <td>
                       <div style="width: 130px;">
-                        <select class="form-select">
-                          @foreach ($clientes as $cliente)
-                          <option value="{{$cliente->id}}">{{$cliente->id}}</option><br>
-                          @endforeach
-                  </select>
+                        <select name="cliente_id" class="form-select">
+                            <option value="0">Cliente</option>
+                            @foreach ($clientes as $cliente)
+                            <option value="{{$cliente->id}}">{{$cliente->nome}}</option><br>
+                            @endforeach
+                           </select>
                       </div>
                     </td>
 

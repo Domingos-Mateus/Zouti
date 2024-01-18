@@ -16,7 +16,7 @@ class transacoesController extends Controller
     public function index()
     {
         //
-        $clientes = Clientes::count();
+        $clientes = Clientes::all();
 
         return view('dashboard/transacoes', compact('clientes'));
 

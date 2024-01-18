@@ -134,7 +134,7 @@
                 <!--/ User -->
                 <li>
                   <span class="d-none d-md-inline d-lg-inline">
-                    Nome Complento do user
+                    {{ Auth::user()->name }}
                   </span>
                 </li>
               </ul>
