@@ -13,6 +13,19 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+Route::get('/', function () {
+    return view('welcome');
+});
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+require __DIR__.'/auth.php';
+
+
+
 //Boletos
 Route::get('/boletos/registar_boleto', 'App\Http\Controllers\boletosController@create');
 Route::post('/salvar_boleto', 'App\Http\Controllers\boletosController@store');
@@ -54,6 +67,7 @@ Route::post('/salvar_ordem', 'App\Http\Controllers\ordensController@store');
 
 //Transações
 Route::get('/dashboard/transacoes', 'App\Http\Controllers\transacoesController@create');
+Route::get('/dashboard/transacoes', 'App\Http\Controllers\transacoesController@index');
 
 //taxas
 Route::get('/dashboard/taxas', 'App\Http\Controllers\taxaController@create');
@@ -62,7 +76,8 @@ Route::get('/dashboard/taxas', 'App\Http\Controllers\taxaController@create');
 //Rota Para Dashboard
 Route::get('/dashboard/dashboard', 'App\Http\Controllers\dashboardsController@index');
 
-
+/*
 Route::get('/', function () {
     return view('index');
 });
+*/

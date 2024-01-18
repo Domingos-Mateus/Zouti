@@ -42,10 +42,10 @@
     <ul class="menu-inner py-1">
       <!-- Dashboards -->
       <li class="menu-item active open">
-        <a href="/dashboard/taxas" class="menu-link menu-toggle">
+        <a href="#" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons ti ti-smart-home"></i>
-          <div data-i18n="+ Saldo Disponível">+ Saldo Disponível</div>
-          <div data-i18n="R$ -440,00">R$ -440,00</div>
+          <div data-i18n="Bem Vindo">Bem Vindo</div>
+          <div data-i18n="">MX-Digital</div>
           <div class="badge bg-primary rounded-pill ms-auto"></div>
         </a>
       </li>
@@ -57,38 +57,31 @@
       <!-- Cards -->
       <a href="/dashboard/taxas" >
       <li class="menu-item">
-        <i class="menu-icon tf-icons ti ti-smart-home"></i>
-          <div data-i18n="Transações">Transações</div>
+          <div data-i18n="MX-Digital">MX-Digital</div>
           <div class="badge bg-primary rounded-pill ms-auto"></div>
         </a>
 
       </li>
-            <!-- Extended components -->
+
+
+
       <li class="menu-item">
-        <a href="javascript:void(0)" class="menu-link menu-toggle">
+        <a href="/dashboard/taxas" class="menu-link">
+          <div data-i18n="Saldo Disponível">TAXAS</div><br>
+          <div data-i18n="R$-440,00">TAXAS</div>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="/dashboard/dashboard" class="menu-link">
           <i class="menu-icon tf-icons ti ti-components"></i>
           <div data-i18n="Início">Início</div>
         </a>
-
       </li>
-
-      <!-- Icons -->
       <li class="menu-item">
-        <a href="javascript:void(0)" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons ti ti-brand-tabler"></i>
-          <div data-i18n="Links de Pagamento">Links de Pagamento</div>
+        <a href="/dashboard/transacoes" class="menu-link">
+          <i class="menu-icon tf-icons ti ti-checkbox"></i>
+          <div data-i18n="Transação">Transação</div>
         </a>
-
-      </li>
-
-
-      <!-- Forms -->
-      <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons ti ti-toggle-left"></i>
-          <div data-i18n="Recebimento">Recebimento</div>
-        </a>
-
       </li>
       <li class="menu-item">
         <a href="/clientes/registar_cliente" class="menu-link">
@@ -96,72 +89,32 @@
           <div data-i18n="Clientes">Clientes</div>
         </a>
       </li>
-      <!-- Tables -->
       <li class="menu-item">
-        <a href="/dashboard/transacoes" class="menu-link">
-          <i class="menu-icon tf-icons ti ti-table"></i>
-          <div data-i18n="Tables">Transações</div>
+        <a href="#" class="menu-link">
+          <i class="menu-icon tf-icons ti ti-checkbox"></i>
+          <div data-i18n="Links de Pagamento">Links de Pagamento</div>
         </a>
       </li>
       <li class="menu-item">
-        <a href="/dashboard/transacoes" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons ti ti-layout-grid"></i>
-          <div data-i18n="Transações">Transações</div>
+        <a href="#" class="menu-link">
+          <i class="menu-icon tf-icons ti ti-checkbox"></i>
+          <div data-i18n="Recebimentos">Recebimentos</div>
         </a>
-        <ul class="menu-sub">
-          <li class="menu-item">
-            <a href="tables-datatables-basic.html" class="menu-link">
-              <div data-i18n="Basic">Basic</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="tables-datatables-advanced.html" class="menu-link">
-              <div data-i18n="Advanced">Advanced</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="tables-datatables-extensions.html" class="menu-link">
-              <div data-i18n="Extensions">Extensions</div>
-            </a>
-          </li>
-        </ul>
       </li>
 
-      <!-- Charts & Maps -->
-      <li class="menu-header small text-uppercase">
-        <span class="menu-header-text">Gráficos </span>
-      </li>
-      <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
-          <i class="menu-icon tf-icons ti ti-chart-pie"></i>
-          <div data-i18n="Charts">Gráficos</div>
-        </a>
-        <ul class="menu-sub">
-          <li class="menu-item">
-            <a href="charts-apex.html" class="menu-link">
-              <div data-i18n="Apex Charts">Apex Charts</div>
-            </a>
-          </li>
-          <li class="menu-item">
-            <a href="charts-chartjs.html" class="menu-link">
-              <div data-i18n="ChartJS">ChartJS</div>
-            </a>
-          </li>
-        </ul>
-      </li>
 
 
       <!-- Misc -->
 
       <li class="menu-item">
-        <a href="https://pixinvent.ticksy.com/" target="_blank" class="menu-link">
+        <a href="#" target="_blank" class="menu-link">
           <i class="menu-icon tf-icons ti ti-lifebuoy"></i>
           <div data-i18n="Configurações">Configurações</div>
         </a>
       </li>
       <li class="menu-item">
         <a
-          href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
+          href="#"
           target="_blank"
           class="menu-link">
           <i class="menu-icon tf-icons ti ti-file-description"></i>
