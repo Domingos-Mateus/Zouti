@@ -155,7 +155,7 @@
                 <p class="m-0">
                   <span style="font-size: 22px; font-weight: bold;">
                     Transaçoes
-                  </span> <span style="font-size: 15px;">2.369 Registos</span>
+                  </span> <span style="font-size: 15px;">{{$contar}} Registos</span>
                 </p>
               </div>
 

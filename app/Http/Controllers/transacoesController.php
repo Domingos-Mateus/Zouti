@@ -20,7 +20,7 @@ class transacoesController extends Controller
     {
         //
         $clientes = Clientes::all();
-        $transacoes = Transacoes::all();
+        $contar = Transacoes::count();
 
         $transacoes = DB::table('transacoes')
             ->join('clientes', 'transacoes.cliente_id', '=', 'clientes.id')
@@ -28,7 +28,7 @@ class transacoesController extends Controller
             ->select('transacoes.*', 'clientes.nome as nome_cliente','clientes.email','clientes.abreviacao', 'produtos.nome_produto','produtos.preco')
             ->get();
 
-        return view('dashboard/transacoes', compact('clientes','transacoes'));
+        return view('dashboard/transacoes', compact('clientes','transacoes','contar'));
 
     }
 
