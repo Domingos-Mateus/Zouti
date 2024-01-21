@@ -3,9 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Pixs;
+use App\Models\Produtos;
 
-class pixsController extends Controller
+class produtoController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -15,8 +15,8 @@ class pixsController extends Controller
     public function index()
     {
         //
-        $pixs = Pixs::all();
-        return view('pix/listar_pix', compact('pixs'));
+        $produtos = Produtos::all();
+        return view('produtos/listar_produtos', compact('produtos'));
     }
 
     /**
@@ -27,7 +27,7 @@ class pixsController extends Controller
     public function create()
     {
         //
-        return view('pix/registar_pix');
+        return view('produtos/registar_produto');
     }
 
     /**
@@ -39,12 +39,13 @@ class pixsController extends Controller
     public function store(Request $request)
     {
         //
-        $pixs = new Pixs;
-        $pixs->pix = $request->pix;
+        $produtos = new Produtos;
+        $produtos->nome_produto = $request->nome_produto;
+        $produtos->preco = $request->preco;
 
-        $pixs->save();
+        $produtos->save();
 
-        return redirect('/pix/listar_pix')->with('success', 'Pix salvo com sucesso!');
+        return redirect('produtos/listar_produtos')->with('success', 'cliente salvo com sucesso!');
     }
 
     /**

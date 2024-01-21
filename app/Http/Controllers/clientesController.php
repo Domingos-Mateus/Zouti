@@ -16,6 +16,8 @@ class clientesController extends Controller
     public function index()
     {
         //
+        $clientes = Clientes::all();
+        return view('clientes/listar_clientes', compact('clientes'));
     }
 
     /**
@@ -41,11 +43,12 @@ class clientesController extends Controller
         $clientes = new Clientes;
         $clientes->abreviacao = $request->abreviacao;
         $clientes->nome = $request->nome;
+        $clientes->email = $request->email;
         $clientes->sexo = $request->sexo;
 
         $clientes->save();
 
-        return redirect('/')->with('success', 'cliente salvo com sucesso!');
+        return redirect('clientes/listar_clientes')->with('success', 'cliente salvo com sucesso!');
     }
 
     /**

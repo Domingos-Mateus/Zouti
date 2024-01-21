@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Clientes;
+use App\Models\Produtos;
+use App\Models\Transacoes;
+use DB;
 
 class transacoesController extends Controller
 {
@@ -17,8 +20,15 @@ class transacoesController extends Controller
     {
         //
         $clientes = Clientes::all();
+        $transacoes = Transacoes::all();
 
-        return view('dashboard/transacoes', compact('clientes'));
+        $transacoes = DB::table('transacoes')
+            ->join('clientes', 'transacoes.cliente_id', '=', 'clientes.id')
+            ->join('produtos', 'transacoes.produto_id', '=', 'produtos.id')
+            ->select('transacoes.*', 'clientes.nome as nome_cliente','clientes.email','clientes.abreviacao', 'produtos.nome_produto','produtos.preco')
+            ->get();
+
+        return view('dashboard/transacoes', compact('clientes','transacoes'));
 
     }
 
@@ -30,7 +40,11 @@ class transacoesController extends Controller
     public function create()
     {
         //
-        return view('dashboard/transacoes');
+        $clientes = Clientes::all();
+        $produtos = Produtos::all();
+
+
+        return view('transacoes/registar_transacao',compact('clientes','produtos'));
     }
 
     /**
@@ -42,6 +56,16 @@ class transacoesController extends Controller
     public function store(Request $request)
     {
         //
+        $transacoes = new Transacoes;
+        $transacoes->cliente_id = $request->cliente_id;
+        $transacoes->forma_pagamento = $request->forma_pagamento;
+        $transacoes->status = $request->status;
+        $transacoes->produto_id = $request->produto_id;
+        $transacoes->data_pagamento = $request->data_pagamento;
+
+        $transacoes->save();
+
+        return redirect('dashboard/transacoes')->with('success', 'cliente salvo com sucesso!');
     }
 
     /**

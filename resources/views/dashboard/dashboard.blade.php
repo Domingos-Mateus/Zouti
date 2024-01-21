@@ -209,7 +209,7 @@
                       </div>
                       <h4 class="ms-1 mb-0">42</h4>
                     </div> -->
-                    <p class="mb-1">Total em vendas</p>
+                    <p class="mb-1">Pedidos pagos</p>
                     <p class="mb-0">
                       <span class="fw-medium me-1">
                       <b>R$ 1000000000
@@ -232,7 +232,7 @@
                       </div>
                       <h4 class="ms-1 mb-0">42</h4>
                     </div> -->
-                    <p class="mb-1">Total em vendas</p>
+                    <p class="mb-1">Tícket médio</p>
                     <p class="mb-0">
                       <span class="fw-medium me-1">
                       <b>R$ 1000000000

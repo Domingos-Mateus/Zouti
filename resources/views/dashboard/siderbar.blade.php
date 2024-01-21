@@ -84,7 +84,7 @@
         </a>
       </li>
       <li class="menu-item">
-        <a href="/clientes/registar_cliente" class="menu-link">
+        <a href="/clientes/listar_clientes" class="menu-link">
           <i class="menu-icon tf-icons ti ti-checkbox"></i>
           <div data-i18n="Clientes">Clientes</div>
         </a>

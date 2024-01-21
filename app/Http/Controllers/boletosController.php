@@ -16,6 +16,9 @@ class boletosController extends Controller
     public function index()
     {
         //
+        $boletos = Boletos::all();
+        return view('boletos/listar_boletos', compact('boletos'));
+
     }
 
     /**
@@ -43,7 +46,7 @@ class boletosController extends Controller
 
         $boletos->save();
 
-        return redirect('/')->with('success', 'Boleto salvo com sucesso!');
+        return redirect('boletos/listar_boletos')->with('success', 'Boleto salvo com sucesso!');
     }
 
     /**

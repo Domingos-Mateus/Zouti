@@ -16,6 +16,8 @@ class ticketsController extends Controller
     public function index()
     {
         //
+        $tickets = Tickets::all();
+        return view('tickets/listar_tickets', compact('tickets'));
     }
 
     /**
@@ -43,7 +45,7 @@ class ticketsController extends Controller
 
         $tickets->save();
 
-        return redirect('/')->with('success', 'Ticket salvo com sucesso!');
+        return redirect('tickets/listar_tickets')->with('success', 'Ticket salvo com sucesso!');
     }
 
     /**

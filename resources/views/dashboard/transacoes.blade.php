@@ -160,11 +160,12 @@
               </div>
 
                <div class="col-12 col-md-6 col-lg-6 d-lg-flex justify-content-end mt-2">
-                 <div>
+                <a href="/transacoes/registar_transacao"> <div>
                   <button class="col-12 btn btn-primary">
                     Criar transaçao manual
                   </button>
                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -266,14 +267,15 @@
                     </thead>
                     <tbody class="table-border-bottom-0">
                       <tr>
+                        @foreach($transacoes as $transacao)
                         <td>
                           <div style="display: flex; flex-direction: row; align-items: start;">
                             <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
-                              AL
+                                {{$transacao->abreviacao}}
                             </div>
                             <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">Alexandre Gonsalves Pinheiro</p>
-                              <p class="m-0" style="font-size: 13px;">alexandrepinheiro@gmail.com</p>
+                              <p class="m-0" style="font-weight: bold;">{{$transacao->nome_cliente}}</p>
+                              <p class="m-0" style="font-size: 13px;">{{$transacao->email}}</p>
                             </div>
                           </div>
                         </td>
@@ -286,24 +288,24 @@
                                 R$ 123,48
                               </p>
                               <p class="m-0" style="font-size: 13px;">
-                                Vence em 24/12
+                                {{$transacao->forma_pagamento}}
                               </p>
                             </div>
                           </div>
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                        <td><span class="badge bg-label-primary me-1">{{$transacao->status}}</span></td>
                         <td>
                           <div style="display: inline-block;">
                             <p class="m-0" style="font-weight: bold;">
-                              KIT COM 3 PARES - TENIS
+                                {{$transacao->nome_produto}}
                             </p>
                             <p class="m-0" style="font-size: 13px;">
-                              R$ 123,48
+                              R$  {{$transacao->preco}}
                             </p>
                           </div>
                         </td>
                         <td>
-                          22 de dez. 00:10
+                            {{$transacao->data_pagamento}}
                         </td>
                         <td>
                           ha 2 semanas
@@ -323,6 +325,7 @@
                             </div>
                           </div>
                         </td>
+                        @endforeach
                       </tr>
                     </tbody>
                   </table>
