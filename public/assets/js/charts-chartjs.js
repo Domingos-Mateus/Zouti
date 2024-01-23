@@ -130,7 +130,7 @@
     const horizontalBarChartVar = new Chart(horizontalBarChart, {
       type: 'bar',
       data: {
-        labels: ['1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x', '11x', '12'],
+        labels: ['1x', '2x', '3x', '4x', '5x', '6x', '7x', '8x', '9x', '10x', '11x', '12x'],
         datasets: [
           {
             data: [710, 350, 470, 580, 230, 240, 220, 250, 120, 230, 200, 123],
