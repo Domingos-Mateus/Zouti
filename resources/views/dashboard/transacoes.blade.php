@@ -266,8 +266,8 @@
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
-                      <tr>
                         @foreach($transacoes as $transacao)
+                      <tr>
                         <td>
                           <div style="display: flex; flex-direction: row; align-items: start;">
                             <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
@@ -325,8 +325,9 @@
                             </div>
                           </div>
                         </td>
-                        @endforeach
                       </tr>
+                      @endforeach
+
                     </tbody>
                   </table>
                 </div>
