@@ -85,31 +85,31 @@
               </li>
               <li class="menu-item">
                 <a href="/dashboard/dashboard" class="menu-link">
-                  <i class="menu-icon tf-icons ti ti-components"></i>
+                    <i class="menu-icon tf-icons ti ti-components"></i>
                   <div data-i18n="Início">Início</div>
                 </a>
               </li>
               <li class="menu-item">
                 <a href="/dashboard/transacoes" class="menu-link">
-                  <i class="menu-icon tf-icons ti ti-checkbox"></i>
+                    <i class="fas fa-credit-card me-2"></i>
                   <div data-i18n="Transação">Transação</div>
                 </a>
               </li>
               <li class="menu-item">
                 <a href="/clientes/registar_cliente" class="menu-link">
-                  <i class="menu-icon tf-icons ti ti-checkbox"></i>
+                    <i class="fas fa-users me-2"></i>
                   <div data-i18n="Clientes">Clientes</div>
                 </a>
               </li>
               <li class="menu-item">
                 <a href="#" class="menu-link">
-                  <i class="menu-icon tf-icons ti ti-checkbox"></i>
+                    <i class="fas fa-link me-2"></i>
                   <div data-i18n="Links de Pagamento">Links de Pagamento</div>
                 </a>
               </li>
               <li class="menu-item">
                 <a href="#" class="menu-link">
-                  <i class="menu-icon tf-icons ti ti-checkbox"></i>
+                    <i class="fas fa-receipt me-2"></i>
                   <div data-i18n="Recebimentos">Recebimentos</div>
                 </a>
               </li>
@@ -120,7 +120,7 @@
 
               <li class="menu-item">
                 <a href="#" target="_blank" class="menu-link">
-                  <i class="menu-icon tf-icons ti ti-lifebuoy"></i>
+                    <i class="fas fa-cog me-2"></i>
                   <div data-i18n="Configurações">Configurações</div>
                 </a>
               </li>
@@ -129,7 +129,7 @@
                   href="#"
                   target="_blank"
                   class="menu-link">
-                  <i class="menu-icon tf-icons ti ti-file-description"></i>
+                  <i class="fas fa-plus me-2"></i>
                   <div data-i18n="Solicitar Aumento">Solicitar Aumento</div>
                 </a>
               </li>
