@@ -152,342 +152,534 @@
             <div class="container-xxl flex-grow-1 container-p-y">
 
 
-            <!-- Content wrapper -->
-            <div class="content-wrapper">
-              <!-- Content -->
 
-              <div class="container-xxl flex-grow-1 container-p-y">
-               <div class="row">
-              <div class="col-12 col-lg-8">
+          <!-- Content wrapper -->
+          <div class="content-wrapper">
+            <!-- Content -->
 
-                <div class="row">
-                  <div class="col-12 col-md-6 col-lg-6 mb-3" style="border-left: 2px solid orange;">
-                     <h3 class="m-0">
-                      Dashboard
-                    </h3>
-                    <p>Actualizaçoes a todo instante</p>
-                  </div>
+            <div class="container-xxl flex-grow-1 container-p-y">
+             <div class="row">
+            <div class="col-12 col-lg-8">
 
-                  <div class="col-12 col-md-6 col-lg-6">
-                  <div class="m-0 p-0 mb-3">
-                    <div class="d-flex-flex">
-                      <div class="col-12">
-                        <select class="form-select">
-                          <option value="2023-12-31_2024-01-06">Dec 31, 2023 – Jan 6, 2024</option>
-                        </select>
-                      </div>
+              <div class="row">
+                <div class="col-12 col-md-6 col-lg-6 mb-3" style="border-left: 2px solid orange;">
+                   <h3 class="m-0">
+                    Dashboard
+                  </h3>
+                  <p>Actualizaçoes a todo instante</p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-6">
+                <div class="m-0 p-0 mb-3">
+                  <div class="d-flex-flex">
+                    <div class="col-12">
+                      <select class="form-select">
+                        <option value="2023-12-31_2024-01-06">Dec 31, 2023 – Jan 6, 2024</option>
+                      </select>
                     </div>
                   </div>
-                  </div>
-
+                </div>
                 </div>
 
-                <div class="row m-0 p-0">
-                <div class="row bg-white m-0 p-0 rounded-3 mb-3 pt-3 pb-1">
-                  <div class="col-sm-6 col-lg-4 mb-4">
-                    <p class="mb-1">Total em vendas</p>
-                        <p class="mb-0">
-                          <span class="fw-medium me-1">
-                          <b>R$ 1000000000
-                            <span>
-                              <img src="../../assets/seta-verde.png" width="28" class="rotate">
-                            </span>
-                          </b>
-                        </span>
-                        </p>
-                  </div>
+              </div>
 
-                  <div class="col-sm-6 col-lg-4 mb-4">
-                    <p class="mb-1">Pedidos Pagos</p>
-                        <p class="mb-0">
-                          <span class="fw-medium me-1">
-                          <b>R$ 1000000000
-                            <span>
-                              <img src="../../assets/seta-verde.png" width="28" class="rotate">
-                            </span>
-                          </b>
-                        </span>
-                        </p>
-                  </div>
-
-                  <div class="col-sm-6 col-lg-4 mb-4">
-                    <p class="mb-1">Ticket medio</p>
-                        <p class="mb-0">
-                          <span class="fw-medium me-1">
-                          <b>R$ 1000000000
-                            <span>
-                              <img src="../../assets/seta-verde.png" width="28" class="rotate">
-                            </span>
-                          </b>
-                        </span>
-                        </p>
-                  </div>
+              <div class="row m-0 p-0">
+              <div class="row bg-white m-0 p-0 rounded-3 mb-3 pt-3 pb-1">
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <p class="mb-1">Total em vendas</p>
+                      <p class="mb-0">
+                        <span class="fw-medium me-1">
+                        <b>R$ 1000000000
+                          <span>
+                            <img src="../../assets/seta-verde.png" width="28" class="rotate">
+                          </span>
+                        </b>
+                      </span>
+                      </p>
                 </div>
 
-                <!-- Grafico de Area -->
-                <div class="card">
-                        <div class="card-header d-flex justify-content-between">
-                          <div>
-                            <h5 class="card-title mb-0">Vendas por dia</h5>
-                            <small class="text-muted">Acompanhe o volume diario da sua empresa</small>
-                          </div>
-                          <div class="dropdown">
-                            <button
-                              type="button"
-                              class="btn dropdown-toggle px-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="ti ti-calendar"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a>
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Yesterday</a>
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Last 7 Days</a
-                                >
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Last 30 Days</a
-                                >
-                              </li>
-                              <li>
-                                <hr class="dropdown-divider" />
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Current Month</a
-                                >
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last Month</a>
-                              </li>
-                            </ul>
-                          </div>
-                        </div>
-                        <div class="card-body">
-                          <div id="lineAreaChart"></div>
-                        </div>
-                      </div>
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <p class="mb-1">Pedidos Pagos</p>
+                      <p class="mb-0">
+                        <span class="fw-medium me-1">
+                        <b>R$ 1000000000
+                          <span>
+                            <img src="../../assets/seta-verde.png" width="28" class="rotate">
+                          </span>
+                        </b>
+                      </span>
+                      </p>
+                </div>
+
+                <div class="col-sm-6 col-lg-4 mb-4">
+                  <p class="mb-1">Ticket medio</p>
+                      <p class="mb-0">
+                        <span class="fw-medium me-1">
+                        <b>R$ 1000000000
+                          <span>
+                            <img src="../../assets/seta-verde.png" width="28" class="rotate">
+                          </span>
+                        </b>
+                      </span>
+                      </p>
+                </div>
               </div>
-              </div>
-              <div class="col-12 col-lg-4 mt-3 mt-lg-0">
-                <div class="">
-                  <div class="card h-100">
-                      <div class="card-header d-flex align-items-center justify-content-between">
+
+              <!-- Grafico de Area -->
+              <div class="card">
+                      <div class="card-header d-flex justify-content-between">
                         <div>
-                          <h5 class="m-0">Indices</h5>
-                          <p>Boletos, PIX e Chargebaks</p>
+                          <h5 class="card-title mb-0">Vendas por dia</h5>
+                          <small class="text-muted">Acompanhe o volume diario da sua empresa</small>
+                        </div>
+                        <div class="dropdown">
+                          <button
+                            type="button"
+                            class="btn dropdown-toggle px-0"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ti ti-calendar"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Yesterday</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last 7 Days</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last 30 Days</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Current Month</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Last Month</a>
+                            </li>
+                          </ul>
                         </div>
                       </div>
                       <div class="card-body">
-                        <ul class="p-0 m-0">
-                          <li class="d-flex mb-3 pb-1">
-                            <div
-                              class="chart-progress me-3"
-                              data-color="primary"
-                              data-series="{{$boletos}}"
-                              data-progress_variant="true"></div>
-                            <div class="row w-100 align-items-center">
-                              <div class="col-9">
-                                <div class="me-2">
-                                  <h6 class="mb-2">Boletos</h6>
-                                  <small>Conversão</small>
-                                </div>
-                              </div>
-                              <div class="col-3 text-end">
-                                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                                  <i class="ti ti-chevron-right scaleX-n1-rtl"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="d-flex mb-3 pb-1">
-                            <div
-                              class="chart-progress me-3"
-                              data-color="success"
-                              data-series="{{$pixs}}"
-                              data-progress_variant="true"></div>
-                            <div class="row w-100 align-items-center">
-                              <div class="col-9">
-                                <div class="me-2">
-                                  <h6 class="mb-2">Pix</h6>
-                                  <small>Conversão</small>
-                                </div>
-                              </div>
-                              <div class="col-3 text-end">
-                                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                                  <i class="ti ti-chevron-right scaleX-n1-rtl"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="d-flex mb-3 pb-1">
-                            <div
-                              class="chart-progress me-3"
-                              data-color="danger"
-                              data-series="{{$chargebacks}}"
-                              data-progress_variant="true"></div>
-                            <div class="row w-100 align-items-center">
-                              <div class="col-9">
-                                <div class="me-2">
-                                  <h6 class="mb-2">Chargebaks</h6>
-                                  <small>0 neste período</small>
-                                </div>
-                              </div>
-                              <div class="col-3 text-end">
-                                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                                  <i class="ti ti-chevron-right scaleX-n1-rtl"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                          <li class="d-flex">
-                            <div
-                              class="chart-progress me-3"
-                              data-color="info"
-                              data-series="{{$chargebacks}}"
-                              data-progress_variant="true"></div>
-                            <div class="row w-100 align-items-center">
-                              <div class="col-9">
-                                <div class="me-2">
-                                  <h6 class="mb-2">Pré-Chargebaks</h6>
-                                  <small>3 neste período</small>
-                                </div>
-                              </div>
-                              <div class="col-3 text-end">
-                                <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
-                                  <i class="ti ti-chevron-right scaleX-n1-rtl"></i>
-                                </button>
-                              </div>
-                            </div>
-                          </li>
-                        </ul>
+                        <div id="lineAreaChart"></div>
                       </div>
                     </div>
 
-                    <br>
-
-                    <div class="card">
-                      <div class="card-header header-elements">
-                        <div class="d-flex flex-column">
-                          <h5 class="card-title mb-2">Parecelas no Cartao</h5>
-                          <p class="card-subtitle text-muted mb-1">Numero de transaçoes</p>
+                    <!-- Continuaçao do prieenchimento da pagina -->
+                    <div class="col-sm-12 col-md-4 col-lg-4 my-3 p-0 m-0 pe-lg-1 pe-md-1">
+                    <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <div>
+                        <h5 class="m-0" style="font-size: 15px;">Vendas por metodos</h5>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="mb-2">
+                            Cartão
+                          </p>
                         </div>
-                        <div class="card-action-element ms-auto py-0">
-                          <div class="dropdown">
-                            <button
-                              type="button"
-                              class="btn dropdown-toggle px-0"
-                              data-bs-toggle="dropdown"
-                              aria-expanded="false">
-                              <i class="ti ti-calendar"></i>
-                            </button>
-                            <ul class="dropdown-menu dropdown-menu-end">
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a>
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Yesterday</a
-                                >
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Last 7 Days</a
-                                >
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Last 30 Days</a
-                                >
-                              </li>
-                              <li>
-                                <hr class="dropdown-divider" />
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Current Month</a
-                                >
-                              </li>
-                              <li>
-                                <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
-                                  >Last Month</a
-                                >
-                              </li>
-                            </ul>
-                          </div>
+                        <div class="col-6 text-end">
+                          <p class="mb-2">
+                            0%
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="mb-2">
+                            Cartão
+                          </p>
+                        </div>
+                        <div class="col-6 text-end">
+                          <p class="mb-2">
+                            0%
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="mb-2">
+                            Cartão
+                          </p>
+                        </div>
+                        <div class="col-6 text-end">
+                          <p class="mb-2">
+                            0%
+                          </p>
                         </div>
                       </div>
-                      <div class="card-body">
-                        <canvas id="horizontalBarChart" class="chartjs" data-height="400"></canvas>
-                      </div>
-                    </div>
-                </div>
-              </div>
-            </div>
-
-                </div>
-                <!--  Topic and Instructors  End-->
-
-
-
-              <!-- / Content -->
-
-              <!-- Footer -->
-              <footer class="content-footer footer bg-footer-theme">
-                <div class="container-xxl">
-                  <div
-                    class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
-                    <div>
-                      ©
-                      <script>
-                        document.write(new Date().getFullYear());
-                      </script>
-                      , made with ❤️ by <a href="https://pixinvent.com" target="_blank" class="fw-medium">Pixinvent</a>
-                    </div>
-                    <div class="d-none d-lg-inline-block">
-                      <a href="https://themeforest.net/licenses/standard" class="footer-link me-4" target="_blank"
-                        >License</a
-                      >
-                      <a href="https://1.envato.market/pixinvent_portfolio" target="_blank" class="footer-link me-4"
-                        >More Themes</a
-                      >
-
-                      <a
-                        href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
-                        target="_blank"
-                        class="footer-link me-4"
-                        >Documentation</a
-                      >
-
-                      <a href="https://pixinvent.ticksy.com/" target="_blank" class="footer-link d-none d-sm-inline-block"
-                        >Support</a
-                      >
                     </div>
                   </div>
-                </div>
-              </footer>
-              <!-- / Footer -->
+                  </div>
 
-              <div class="content-backdrop fade"></div>
+
+                  <div class="col-sm-12 col-md-8 col-lg-8 my-3 p-0 m-0 ps-lg-1 ps-md-1">
+                    <div class="card h-100">
+                    <div class="card-body">
+                      <ul class="p-0 m-0">
+                        <li class="d-flex mb-3 pb-1">
+                          <div class="row w-100 align-items-center">
+                            <div class="col-9">
+                              <div class="me-2">
+                                <h5 class="m-0" style="font-size: 15px;">Vendas no Cartão</h5>
+                                <p class="m-0 mb-2">Texto a ser preenchido..</p>
+                              </div>
+                              <div>
+                                <h4 class="m-0">R$ 0,00</h4>
+                                <p class="m-0">Texto a ser preenchido..</p>
+                                <p class="m-0">Texto a ser preenchido..</p>
+                              </div>
+                            </div>
+                          </div>
+                          <div style="display: flex; align-items: center;">
+                          <div
+                            class="chart-progress me-3"
+                            data-color="danger"
+                            data-series="15"
+                            data-progress_variant="true">
+                          </div>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-6 col-lg-6 my-2 p-0 m-0 pe-lg-1 pe-md-1">
+                    <div class="card h-100">
+                    <div class="row pt-4 px-4">
+                        <div class="col-6">
+                          <p class="m-0">
+                            Vendas no Pix
+                          </p>
+                        </div>
+                        <div class="col-6 text-end">
+                          <p class="m-0">Pix</p>
+                        </div>
+                      </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <h4 class="m-0">R$ 0,00</h4>
+                        </div>
+                        <div>
+                          <div class="col-12 my-3" style="height: 10px; background: green;">
+
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <p class="mb-2">
+                            Vale pago total <b>R$ 0,00</b>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
+                  <div class="col-sm-12 col-md-6 col-lg-6 my-2 p-0 m-0 ps-lg-1 pe-md-1">
+                    <div class="card h-100">
+                    <div class="row pt-4 px-4">
+                        <div class="col-6">
+                          <p class="m-0">
+                            Vendas no Pix
+                          </p>
+                        </div>
+                        <div class="col-6 text-end">
+                          <p class="m-0">Pix</p>
+                        </div>
+                      </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <h4 class="m-0">R$ 0,00</h4>
+                        </div>
+                        <div>
+                          <div class="col-12 my-3" style="height: 10px; background: green;">
+
+                          </div>
+                        </div>
+                        <div class="col-12">
+                          <p class="mb-2">
+                            Vale pago total <b>R$ 0,00</b>
+                          </p>
+                        </div>
+
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+
             </div>
-            <!-- Content wrapper -->
+            </div>
+
+            <div class="col-12 col-lg-4 mt-3 mt-lg-0">
+              <div class="">
+                <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <div>
+                        <div class="card h-100">
+                            <div class="card-header d-flex align-items-center justify-content-between">
+                              <div>
+                                <h5 class="m-0">Indices</h5>
+                                <p>Boletos, PIX e Chargebaks</p>
+                              </div>
+                            </div>
+                            <div class="card-body">
+                              <ul class="p-0 m-0">
+                                <li class="d-flex mb-3 pb-1">
+                                  <div
+                                    class="chart-progress me-3"
+                                    data-color="primary"
+                                    data-series="{{$boletos}}"
+                                    data-progress_variant="true"></div>
+                                  <div class="row w-100 align-items-center">
+                                    <div class="col-9">
+                                      <div class="me-2">
+                                        <h6 class="mb-2">Boletos</h6>
+                                        <small>Conversão</small>
+                                      </div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                      <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
+                                        <i class="ti ti-chevron-right scaleX-n1-rtl"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="d-flex mb-3 pb-1">
+                                  <div
+                                    class="chart-progress me-3"
+                                    data-color="success"
+                                    data-series="{{$pixs}}"
+                                    data-progress_variant="true"></div>
+                                  <div class="row w-100 align-items-center">
+                                    <div class="col-9">
+                                      <div class="me-2">
+                                        <h6 class="mb-2">Pix</h6>
+                                        <small>Conversão</small>
+                                      </div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                      <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
+                                        <i class="ti ti-chevron-right scaleX-n1-rtl"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="d-flex mb-3 pb-1">
+                                  <div
+                                    class="chart-progress me-3"
+                                    data-color="danger"
+                                    data-series="{{$chargebacks}}"
+                                    data-progress_variant="true"></div>
+                                  <div class="row w-100 align-items-center">
+                                    <div class="col-9">
+                                      <div class="me-2">
+                                        <h6 class="mb-2">Chargebaks</h6>
+                                        <small>0 neste período</small>
+                                      </div>
+                                    </div>
+                                    <div class="col-3 text-end">
+                                      <button type="button" class="btn btn-sm btn-icon btn-label-secondary">
+                                        <i class="ti ti-chevron-right scaleX-n1-rtl"></i>
+                                      </button>
+                                    </div>
+                                  </div>
+                                </li>
+                                <li class="d-flex">
+                                  <div
+                                    class="chart-progress me-3"
+                                    data-color="info"
+                                    data-series="{{$chargebacks}}"
+                                    data-progress_variant="true"></div>
+                                  <div class="row w-100 align-items-center">
+                                    <div class="col-9">
+                                      <div class="me-2">
+                                        <h6 class="mb-2">Pré-Chargebaks</h6>
+                                        <small>3 neste período</small>
+                                    </div>
+                                </li>
+                                    </div>
+                                  </div>
+                                </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="card">
+                    <div class="card-header header-elements">
+                      <div class="d-flex flex-column">
+                        <h5 class="card-title mb-2">Parecelas no Cartao</h5>
+                        <p class="card-subtitle text-muted mb-1">Numero de transaçoes</p>
+                      </div>
+                      <div class="card-action-element ms-auto py-0">
+                        <div class="dropdown">
+                          <button
+                            type="button"
+                            class="btn dropdown-toggle px-0"
+                            data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            <i class="ti ti-calendar"></i>
+                          </button>
+                          <ul class="dropdown-menu dropdown-menu-end">
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center">Today</a>
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Yesterday</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last 7 Days</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last 30 Days</a
+                              >
+                            </li>
+                            <li>
+                              <hr class="dropdown-divider" />
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Current Month</a
+                              >
+                            </li>
+                            <li>
+                              <a href="javascript:void(0);" class="dropdown-item d-flex align-items-center"
+                                >Last Month</a
+                              >
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <canvas id="horizontalBarChart" class="chartjs" data-height="400"></canvas>
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="card h-100">
+                    <div class="card-header d-flex align-items-center justify-content-between">
+                      <div>
+                        <h5 class="card-title m-0">Taxas de Rastreio</h5>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-6">
+                          <p class="mb-2">
+                            Cartão
+                          </p>
+                        </div>
+                        <div class="col-6 text-end">
+                          <p class="mb-2">
+                            0%
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="mb-2">
+                            Cartão
+                          </p>
+                        </div>
+                        <div class="col-6 text-end">
+                          <p class="mb-2">
+                            0%
+                          </p>
+                        </div>
+                        <div class="col-6">
+                          <p class="mb-2">
+                            Cartão
+                          </p>
+                        </div>
+                        <div class="col-6 text-end">
+                          <p class="mb-2">
+                            0%
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+              </div>
+            </div>
           </div>
-          <!-- / Layout page -->
+
+              </div>
+              <!--  Topic and Instructors  End-->
+
+
+
+            <!-- / Content -->
+
+            <!-- Footer -->
+            <footer class="content-footer footer bg-footer-theme">
+              <div class="container-xxl">
+                <div
+                  class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
+                  <div>
+                    ©
+                    <script>
+                      document.write(new Date().getFullYear());
+                    </script>
+                    , Distribuido com ❤️ Por <a href="http://devaholic.ao" target="_blank" class="fw-medium">DevAholic</a>
+                  </div>
+                  <div class="d-none d-lg-inline-block">
+                    <a href="https://themeforest.net/licenses/standard" class="footer-link me-4" target="_blank"
+                      >License</a
+                    >
+                    <a href="https://1.envato.market/pixinvent_portfolio" target="_blank" class="footer-link me-4"
+                      >More Themes</a
+                    >
+
+                    <a
+                      href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
+                      target="_blank"
+                      class="footer-link me-4"
+                      >Documentation</a
+                    >
+
+                    <a href="https://pixinvent.ticksy.com/" target="_blank" class="footer-link d-none d-sm-inline-block"
+                      >Support</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </footer>
+            <!-- / Footer -->
+
+            <div class="content-backdrop fade"></div>
+          </div>
+          <!-- Content wrapper -->
         </div>
-
-        <!-- Overlay -->
-        <div class="layout-overlay layout-menu-toggle"></div>
-
-        <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-        <div class="drag-target"></div>
+        <!-- / Layout page -->
       </div>
-      <!-- / Layout wrapper -->
+
+      <!-- Overlay -->
+      <div class="layout-overlay layout-menu-toggle"></div>
+
+      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
+      <div class="drag-target"></div>
+    </div>
+    <!-- / Layout wrapper -->
 
     @endsection

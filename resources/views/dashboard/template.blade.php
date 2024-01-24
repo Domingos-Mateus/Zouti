@@ -219,6 +219,21 @@
           }
         }
     </style>
+
+<style type="text/css">
+    @media (max-width: 1199px) {
+      .d-flex-flex {
+        display: flex;
+        justify-content: center;
+      }
+    }
+
+    .card-pay {
+      background-image: url('../../assets/img2/banner-taxas.png');
+      background-size: cover;
+      background-position: 10%;
+    }
+</style>
   </head>
 
   <body>
