@@ -158,7 +158,7 @@
     <a href="/chargebacks/listar_chargebacks" class="btn btn-primary">Chargebacks</a>
     <a href="/tickets/listar_tickets" class="btn btn-primary">tickets</a>
     <a href="/ordens/listar_ordens" class="btn btn-primary">ordens</a>
-    <a href="/pedidos/listar_pedidos" class="btn btn-primary">Pedidos</a>
+    <a href="/ordens/listar_ordem" class="btn btn-primary">Pedidos</a>
     <a href="/vendas/listar_vendas" class="btn btn-primary">Vendas</a>
 </div>
 

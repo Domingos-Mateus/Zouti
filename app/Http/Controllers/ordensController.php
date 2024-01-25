@@ -16,6 +16,9 @@ class ordensController extends Controller
     public function index()
     {
         //
+        $ordens = Ordens::all();
+        //return $ordens;
+        return view('ordens/listar_ordem', compact('ordens'));
     }
 
     /**
@@ -39,6 +42,7 @@ class ordensController extends Controller
     {
         //
         $ordens = new Ordens;
+
         $ordens->produto = $request->produto;
         $ordens->valor_produto = $request->valor_produto;
         $ordens->quantidade_pedidos_pix = $request->quantidade_pedidos_pix;
@@ -48,7 +52,9 @@ class ordensController extends Controller
 
         $ordens->save();
 
-        return redirect('/')->with('success', 'cliente salvo com sucesso!');
+        return $ordens;
+
+        return redirect('ordens/listar_ordem')->with('success', 'cliente salvo com sucesso!');
     }
 
     /**

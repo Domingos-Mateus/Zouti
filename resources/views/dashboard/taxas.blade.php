@@ -85,13 +85,13 @@
                     <li>
                       <a class="dropdown-item" href="pages-profile-user.html">
                         <i class="ti ti-user-check me-2 ti-sm"></i>
-                        <span class="align-middle">My Profile</span>
+                        <span class="align-middle">Meu Perfil</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="pages-account-settings-account.html">
                         <i class="ti ti-settings me-2 ti-sm"></i>
-                        <span class="align-middle">Settings</span>
+                        <span class="align-middle">Definições</span>
                       </a>
                     </li>
                     <li>
