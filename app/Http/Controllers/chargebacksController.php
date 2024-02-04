@@ -16,6 +16,9 @@ class chargebacksController extends Controller
     public function index()
     {
         //
+        $chargebacks = Chargebacks::all();
+        return view('chargebacks/listar_chargebacks', compact('chargebacks'));
+
     }
 
     /**
@@ -43,7 +46,7 @@ class chargebacksController extends Controller
 
         $chargebacks->save();
 
-        return redirect('/')->with('success', 'Boleto salvo com sucesso!');
+        return redirect('chargebacks/listar_chargebacks')->with('success', 'Boleto salvo com sucesso!');
     }
 
     /**

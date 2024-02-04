@@ -155,16 +155,17 @@
                 <p class="m-0">
                   <span style="font-size: 22px; font-weight: bold;">
                     Transaçoes
-                  </span> <span style="font-size: 15px;">2.369 Registos</span>
+                  </span> <span style="font-size: 15px;">{{$contar}} Registos</span>
                 </p>
               </div>
 
                <div class="col-12 col-md-6 col-lg-6 d-lg-flex justify-content-end mt-2">
-                 <div>
+                <a href="/transacoes/registar_transacao"> <div>
                   <button class="col-12 btn btn-primary">
                     Criar transaçao manual
                   </button>
                  </div>
+                </a>
               </div>
             </div>
           </div>
@@ -265,15 +266,16 @@
                       </tr>
                     </thead>
                     <tbody class="table-border-bottom-0">
+                        @foreach($transacoes as $transacao)
                       <tr>
                         <td>
                           <div style="display: flex; flex-direction: row; align-items: start;">
                             <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
-                              AL
+                                {{$transacao->abreviacao}}
                             </div>
                             <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">Alexandre Gonsalves Pinheiro</p>
-                              <p class="m-0" style="font-size: 13px;">alexandrepinheiro@gmail.com</p>
+                              <p class="m-0" style="font-weight: bold;">{{$transacao->nome_cliente}}</p>
+                              <p class="m-0" style="font-size: 13px;">{{$transacao->email}}</p>
                             </div>
                           </div>
                         </td>
@@ -286,24 +288,24 @@
                                 R$ 123,48
                               </p>
                               <p class="m-0" style="font-size: 13px;">
-                                Vence em 24/12
+                                {{$transacao->forma_pagamento}}
                               </p>
                             </div>
                           </div>
                         </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
+                        <td><span class="badge bg-label-primary me-1">{{$transacao->status}}</span></td>
                         <td>
                           <div style="display: inline-block;">
                             <p class="m-0" style="font-weight: bold;">
-                              KIT COM 3 PARES - TENIS
+                                {{$transacao->nome_produto}}
                             </p>
                             <p class="m-0" style="font-size: 13px;">
-                              R$ 123,48
+                              R$  {{$transacao->preco}}
                             </p>
                           </div>
                         </td>
                         <td>
-                          22 de dez. 00:10
+                            {{$transacao->data_pagamento}}
                         </td>
                         <td>
                           ha 2 semanas
@@ -324,242 +326,8 @@
                           </div>
                         </td>
                       </tr>
-                      <tr>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
-                              AL
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">Alexandre Gonsalves Pinheiro</p>
-                              <p class="m-0" style="font-size: 13px;">alexandrepinheiro@gmail.com</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-block; width: 40px; height: 40px;">
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">
-                                R$ 123,48
-                              </p>
-                              <p class="m-0" style="font-size: 13px;">
-                                Vence em 24/12
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
-                        <td>
-                          <div style="display: inline-block;">
-                            <p class="m-0" style="font-weight: bold;">
-                              KIT COM 3 PARES - TENIS
-                            </p>
-                            <p class="m-0" style="font-size: 13px;">
-                              R$ 123,48
-                            </p>
-                          </div>
-                        </td>
-                        <td>
-                          22 de dez. 00:10
-                        </td>
-                        <td>
-                          ha 2 semanas
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="ti ti-dots-vertical"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-pencil me-1"></i> Edit</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-trash me-1"></i> Delete</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
-                              AL
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">Alexandre Gonsalves Pinheiro</p>
-                              <p class="m-0" style="font-size: 13px;">alexandrepinheiro@gmail.com</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-block; width: 40px; height: 40px;">
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">
-                                R$ 123,48
-                              </p>
-                              <p class="m-0" style="font-size: 13px;">
-                                Vence em 24/12
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
-                        <td>
-                          <div style="display: inline-block;">
-                            <p class="m-0" style="font-weight: bold;">
-                              KIT COM 3 PARES - TENIS
-                            </p>
-                            <p class="m-0" style="font-size: 13px;">
-                              R$ 123,48
-                            </p>
-                          </div>
-                        </td>
-                        <td>
-                          22 de dez. 00:10
-                        </td>
-                        <td>
-                          ha 2 semanas
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="ti ti-dots-vertical"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-pencil me-1"></i> Edit</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-trash me-1"></i> Delete</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
-                              AL
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">Alexandre Gonsalves Pinheiro</p>
-                              <p class="m-0" style="font-size: 13px;">alexandrepinheiro@gmail.com</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-block; width: 40px; height: 40px;">
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">
-                                R$ 123,48
-                              </p>
-                              <p class="m-0" style="font-size: 13px;">
-                                Vence em 24/12
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
-                        <td>
-                          <div style="display: inline-block;">
-                            <p class="m-0" style="font-weight: bold;">
-                              KIT COM 3 PARES - TENIS
-                            </p>
-                            <p class="m-0" style="font-size: 13px;">
-                              R$ 123,48
-                            </p>
-                          </div>
-                        </td>
-                        <td>
-                          22 de dez. 00:10
-                        </td>
-                        <td>
-                          ha 2 semanas
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="ti ti-dots-vertical"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-pencil me-1"></i> Edit</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-trash me-1"></i> Delete</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
-                              AL
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">Alexandre Gonsalves Pinheiro</p>
-                              <p class="m-0" style="font-size: 13px;">alexandrepinheiro@gmail.com</p>
-                            </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-block; width: 40px; height: 40px;">
-                            </div>
-                            <div style="display: inline-block;">
-                              <p class="m-0" style="font-weight: bold;">
-                                R$ 123,48
-                              </p>
-                              <p class="m-0" style="font-size: 13px;">
-                                Vence em 24/12
-                              </p>
-                            </div>
-                          </div>
-                        </td>
-                        <td><span class="badge bg-label-primary me-1">Active</span></td>
-                        <td>
-                          <div style="display: inline-block;">
-                            <p class="m-0" style="font-weight: bold;">
-                              KIT COM 3 PARES - TENIS
-                            </p>
-                            <p class="m-0" style="font-size: 13px;">
-                              R$ 123,48
-                            </p>
-                          </div>
-                        </td>
-                        <td>
-                          22 de dez. 00:10
-                        </td>
-                        <td>
-                          ha 2 semanas
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="ti ti-dots-vertical"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-pencil me-1"></i> Edit</a
-                              >
-                              <a class="dropdown-item" href="javascript:void(0);"
-                                ><i class="ti ti-trash me-1"></i> Delete</a
-                              >
-                            </div>
-                          </div>
-                        </td>
-                      </tr>
+                      @endforeach
+
                     </tbody>
                   </table>
                 </div>

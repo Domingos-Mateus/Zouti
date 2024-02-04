@@ -21,6 +21,10 @@
         <label for="campo">Nome:</label>
         <input type="text" name="nome" class="form-control" id="campo" placeholder="Nome">
       </div>
+    <div class="form-group">
+        <label for="campo">Email:</label>
+        <input type="email" name="email" class="form-control" id="campo" placeholder="EX:muangala@gmail.com">
+      </div>
       <div class="form-group">
         <label for="campo">Género:</label>
         <select name="sexo" class="form-control" id="campo">
