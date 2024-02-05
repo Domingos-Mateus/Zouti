@@ -1,0 +1,16 @@
+.verde {
+	background-color: rgba(186, 206, 28,1); 
+}
+
+.active-menu {
+	border-left: 4px solid rgba(186, 206, 28,1);
+	background-color: rgba(186, 206, 28,0.2);
+}
+
+.fw-medium {
+	font-size: 22px;
+}
+
+.titulo-setas {
+	opacity: 0.6;
+}

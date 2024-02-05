@@ -1,6 +1,7 @@
 @extends('dashboard.template')
 
 @section('conteudo')
+
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -23,34 +24,10 @@
               <!-- Search -->
               <div class="col-8 d-flex-flex">
                 <a href="index.html" class="app-brand-link">
-              <span class="app-brand-logo demo">
-                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
-                    fill="#7367F0" />
-                  <path
-                    opacity="0.06"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
-                    fill="#161616" />
-                  <path
-                    opacity="0.06"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
-                    fill="#161616" />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
-                    fill="#7367F0" />
-                </svg>
-              </span>
-              <span class="app-brand-text demo menu-text fw-bold">ZOUTI</span>
-            </a>
+
+                  <!-- Logo zouti -->
+                  <img _ngcontent-lvh-c121="" class="logo" src="https://content.pay.zouti.com.br/tenants/pay.zouti.com.br/logo.png">
+                </a>
               </div>
               <!-- /Search -->
 
@@ -146,37 +123,36 @@
             </div>
           </nav>
           <!-- / Navbar -->
-
 <div class="container mt-5">
-  <h2>Lista de ordens</h2>
+    <h2>Lista de ordens</h2>
 
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <a href="/ordens/registar_ordem" class="btn btn-primary">Adicionar ordem</a>
-</div>
+    <div class="d-flex justify-content-between align-items-center mb-3">
+        <a href="/ordens/registar_ordem" class="btn btn-primary">Adicionar ordem</a>
+    </div>
 
-  <table class="table table-bordered mt-3">
-    <thead>
-      <tr>
-        <th scope="col">produto</th>
+    <table class="table table-bordered mt-3">
+        <thead>
+            <tr>
+                <th scope="col">produto</th>
         <th scope="col">Valor do produto</th>
         <th scope="col">Qtd de Pedidos de Pix</th>
         <th scope="col">Qtd de Pedidos do Cartão</th>
         <th scope="col">Variação de Parcela</th>
         <th scope="col">Género</th>
-      </tr>
+    </tr>
     </thead>
     <tbody>
         @foreach($ordens as $ordem)
-      <tr>
+        <tr>
             <td>{{ $ordem['produto'] }}</td>
             <td>{{ $ordem['valor_produto'] }}</td>
             <td>{{ $ordem['quantidade_pedidos_pix'] }}</td>
             <td>{{ $ordem['quantidade_pedidos_cartao'] }}</td>
             <td>{{ $ordem['variacao_parcela'] }}</td>
             <td>{{ $ordem['genero_cliente'] }}</td>
-      </tr>
-      @endforeach
-      <!-- Adicione mais linhas conforme necessário -->
+        </tr>
+        @endforeach
+        <!-- Adicione mais linhas conforme necessário -->
     </tbody>
   </table>
 

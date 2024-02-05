@@ -512,7 +512,7 @@
         }
       ],
       xaxis: {
-        categories: ['Teste, 11', 'THU, 14', 'FRI, 15', 'teste2, 18', 'WED, 20', 'FRI, 21', 'teste3, 23'],
+        categories: ['MON, 11', 'THU, 14', 'FRI, 15', 'MON, 18', 'WED, 20', 'FRI, 21', 'MON, 23'],
         axisBorder: {
           show: false
         },
@@ -764,7 +764,7 @@
           })
         },
         {
-          name: 'teste4',
+          name: 'MON',
           data: generateDataHeat(24, {
             min: 0,
             max: 60
