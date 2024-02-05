@@ -148,7 +148,7 @@
           <!-- / Navbar -->
 
 <div class="container mt-5">
-  <h2>Lista de ordems</h2>
+  <h2>Lista de ordens</h2>
 
   <div class="d-flex justify-content-between align-items-center mb-3">
     <a href="/ordens/registar_ordem" class="btn btn-primary">Adicionar ordem</a>
