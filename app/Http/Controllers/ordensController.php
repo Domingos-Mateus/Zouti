@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Clientes;
 use Illuminate\Http\Request;
 
 use App\Models\Ordens;
+use App\Models\Produtos;
+use App\Models\Transacoes;
 
 class ordensController extends Controller
 {
@@ -32,48 +35,102 @@ class ordensController extends Controller
         return view('ordens/registar_ordem');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+
+
+     public function store(Request $request)
     {
-        //
+        // Criação de uma nova ordem
         $ordens = new Ordens;
 
-        $ordens->produto = $request->produto;
-        $ordens->valor_produto = $request->valor_produto;
         $ordens->quantidade_pedidos_pix = $request->quantidade_pedidos_pix;
+        $ordens->percentagem_conversao_pix = $request->percentagem_conversao_pix;
         $ordens->quantidade_pedidos_cartao = $request->quantidade_pedidos_cartao;
-        $ordens->variacao_parcela = $request->variacao_parcela;
         $ordens->genero_cliente = $request->genero_cliente;
 
+        // Salva a ordem
         $ordens->save();
 
-        return $ordens;
+        // Obtém a quantidade de transações a serem criadas com base na quantidade de pedidos PIX e Cartão
+        $quantidadePedidosPix = $request->quantidade_pedidos_pix;
+        $percentagemConversaoPix = $request->percentagem_conversao_pix;
+        $quantidadePedidosCartao = $request->quantidade_pedidos_cartao;
 
-        return redirect('ordens/listar_ordem')->with('success', 'cliente salvo com sucesso!');
+        // Calcula a quantidade de pedidos PIX pagos com base na porcentagem de conversão
+        $quantidadePedidosPixPagos = round($quantidadePedidosPix * ($percentagemConversaoPix / 100));
+
+        // Criação automática de transações para pedidos PIX
+        for ($i = 0; $i < $quantidadePedidosPix; $i++) {
+            $transacao = new Transacoes;
+            // Verifica o gênero do cliente conforme os aspectos mencionados
+            if ($request->genero_cliente == 1) {
+                // Se o gênero_cliente for igual a 1, busca clientes do sexo 1
+                $transacao->cliente_id = Clientes::where('sexo', 1)->inRandomOrder()->first()->id;
+            } elseif ($request->genero_cliente == 0) {
+                // Se o gênero_cliente for igual a 0, busca clientes do sexo 0
+                $transacao->cliente_id = Clientes::where('sexo', 0)->inRandomOrder()->first()->id;
+            } elseif ($request->genero_cliente == 2) {
+                // Se o gênero_cliente for igual a 2, busca clientes de ambos os sexos
+                $transacao->cliente_id = Clientes::inRandomOrder()->first()->id;
+            }
+            $transacao->ordem_id = $ordens->id;
+            $transacao->produto_id = Produtos::inRandomOrder()->first()->id;
+            $transacao->data_pagamento = now();
+
+            // Verifica se o pedido PIX deve ser considerado como "Pago" ou "Pendente"
+            if ($i < $quantidadePedidosPixPagos) {
+                $transacao->forma_pagamento = 'PIX';
+                $transacao->status = 'Pago';
+            } else {
+                $transacao->forma_pagamento = 'PIX';
+                $transacao->status = 'Pendente';
+            }
+
+            $transacao->save();
+        }
+
+
+        // Criação automática de transações para pedidos Cartão
+        for ($i = 0; $i < $quantidadePedidosCartao; $i++) {
+            $transacao = new Transacoes;
+
+            // Verifica o gênero do cliente conforme os aspectos mencionados
+            if ($request->genero_cliente == 1) {
+                // Se o gênero_cliente for igual a 1, busca clientes do sexo 1
+                $transacao->cliente_id = Clientes::where('sexo', 1)->inRandomOrder()->first()->id;
+            } elseif ($request->genero_cliente == 0) {
+                // Se o gênero_cliente for igual a 0, busca clientes do sexo 0
+                $transacao->cliente_id = Clientes::where('sexo', 0)->inRandomOrder()->first()->id;
+            } elseif ($request->genero_cliente == 2) {
+                // Se o gênero_cliente for igual a 2, busca clientes de ambos os sexos
+                $transacao->cliente_id = Clientes::inRandomOrder()->first()->id;
+            }
+
+            $transacao->ordem_id = $ordens->id;
+            $transacao->forma_pagamento = 'Cartão';
+            $transacao->produto_id = Produtos::inRandomOrder()->first()->id;
+            $transacao->data_pagamento = now();
+
+            // Atribui o status com base na porcentagem desejada
+            if ($i < ($quantidadePedidosCartao * 0.7)) {
+                $transacao->status = 'Pago';
+            } else {
+                $transacao->status = 'Pendente';
+            }
+
+            $transacao->save();
+        }
+
+
+        return redirect('ordens/listar_ordem')->with('success', 'Ordem salva com sucesso!');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show($id)
     {
         //
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function edit($id)
     {
         //

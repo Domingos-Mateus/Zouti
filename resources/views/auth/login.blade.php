@@ -145,12 +145,12 @@
 
               <div class="text-center">
                 <div class="mb-2">
-                  <a href="auth-forgot-password-basic.html" style="color: #000; opacity: 0.7;">
+                  <a href="/register" style="color: #000; opacity: 0.7;">
                     <small>Esqueceu a Senha?</small>
                   </a>
                 </div>
                 <div>
-                  <a href="auth-forgot-password-basic.html" style="color: #000; opacity: 0.7;">
+                  <a href="/register" style="color: #000; opacity: 0.7;">
                     Criar Conta
                   </a>
                 </div>

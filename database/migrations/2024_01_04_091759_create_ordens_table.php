@@ -15,11 +15,9 @@ class CreateOrdensTable extends Migration
     {
         Schema::create('ordens', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('produto',100);
-            $table->string('valor_produto',100);
             $table->string('quantidade_pedidos_pix');
+            $table->string('percentagem_conversao_pix');
             $table->string('quantidade_pedidos_cartao');
-            $table->boolean('variacao_parcela');
             $table->string('genero_cliente');
             $table->timestamps();
         });

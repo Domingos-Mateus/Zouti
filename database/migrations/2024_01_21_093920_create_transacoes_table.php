@@ -16,6 +16,7 @@ class CreateTransacoesTable extends Migration
         Schema::create('transacoes', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('cliente_id')->unsigned();
+            $table->integer('ordem_id')->unsigned();
             $table->string('forma_pagamento');
             $table->string('status');
             $table->integer('produto_id')->unsigned();
@@ -24,6 +25,7 @@ class CreateTransacoesTable extends Migration
 
             $table->foreign('cliente_id')->references('id')->on('clientes');
             $table->foreign('produto_id')->references('id')->on('produtos');
+            $table->foreign('ordem_id')->references('id')->on('ordens');
         });
     }
 

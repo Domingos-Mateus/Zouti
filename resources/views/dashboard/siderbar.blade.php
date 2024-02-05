@@ -102,6 +102,12 @@
                 </a>
               </li>
               <li class="menu-item">
+                <a href="/ordens/listar_ordem" class="menu-link">
+                    <i class="fas fa-users me-2"></i>
+                  <div data-i18n="Orders">Orders</div>
+                </a>
+              </li>
+              <li class="menu-item">
                 <a href="#" class="menu-link">
                     <i class="fas fa-link me-2"></i>
                   <div data-i18n="Links de Pagamento">Links de Pagamento</div>
