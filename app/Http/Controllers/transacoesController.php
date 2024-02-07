@@ -18,19 +18,18 @@ class transacoesController extends Controller
      */
     public function index()
     {
-        //
         $clientes = Clientes::all();
         $contar = Transacoes::count();
 
         $transacoes = DB::table('transacoes')
             ->join('clientes', 'transacoes.cliente_id', '=', 'clientes.id')
-            ->join('produtos', 'transacoes.produto_id', '=', 'produtos.id')
-            ->select('transacoes.*', 'clientes.nome as nome_cliente','clientes.email','clientes.abreviacao', 'produtos.nome_produto','produtos.preco')
+            ->select('transacoes.*', 'clientes.nome as nome_cliente', 'clientes.email', 'clientes.abreviacao')
+            ->where('transacoes.created_at', '<=', now()) // Adiciona a cláusula where para filtrar por created_at
             ->get();
 
-        return view('dashboard/transacoes', compact('clientes','transacoes','contar'));
-
+        return view('dashboard/transacoes', compact('clientes', 'transacoes', 'contar'));
     }
+
 
     /**
      * Show the form for creating a new resource.

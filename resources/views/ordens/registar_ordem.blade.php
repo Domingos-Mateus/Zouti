@@ -130,9 +130,17 @@
     <form action="/salvar_ordem" method="POST" enctype="multipart/form-data">
         @csrf
     <div class="form-group">
-      <label for="campo">Quantidade de Pedidos PIX:</label>
-      <input type="number" name="quantidade_pedidos_pix" class="form-control" id="campo" placeholder="100" required>
+      <label for="campo">Nome do Produto:</label>
+      <input type="text" name="nome_produto" class="form-control" id="campo" placeholder="100" required>
     </div>
+    <div class="form-group">
+        <label for="campo">Valor do Produto:</label>
+        <input type="number" name="valor_produto" class="form-control" id="campo" placeholder="100" required>
+      </div>
+      <div class="form-group">
+        <label for="campo">Quantidade de Pedidos PIX:</label>
+        <input type="number" name="quantidade_pedidos_pix" class="form-control" id="campo" placeholder="100" required>
+      </div>
     <div class="form-group">
         <label for="campo">Percentagem de Conversão PIX:</label>
         <input type="number" name="percentagem_conversao_pix" class="form-control" id="campo" placeholder="40" required>
@@ -157,5 +165,4 @@
   </form>
 </div>
 
-<!-- Adicionar link para o jQuery e o Bootstrap JavaScript -->
 @endsection

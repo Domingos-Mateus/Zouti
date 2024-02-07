@@ -37,11 +37,14 @@ class ordensController extends Controller
 
 
 
-     public function store(Request $request)
+    public function store(Request $request)
     {
         // Criação de uma nova ordem
         $ordens = new Ordens;
 
+        $ordens->nome_produto = $request->nome_produto;
+        $ordens->valor_produto = $request->valor_produto;
+        $ordens->total_pedidos = $request->quantidade_pedidos_pix + $request->quantidade_pedidos_cartao;
         $ordens->quantidade_pedidos_pix = $request->quantidade_pedidos_pix;
         $ordens->percentagem_conversao_pix = $request->percentagem_conversao_pix;
         $ordens->quantidade_pedidos_cartao = $request->quantidade_pedidos_cartao;
@@ -73,8 +76,19 @@ class ordensController extends Controller
                 $transacao->cliente_id = Clientes::inRandomOrder()->first()->id;
             }
             $transacao->ordem_id = $ordens->id;
-            $transacao->produto_id = Produtos::inRandomOrder()->first()->id;
+            $transacao->nome_produto = $request->nome_produto;
+            $transacao->valor_produto = $request->valor_produto;
             $transacao->data_pagamento = now();
+
+            // Gera um número aleatório de segundos, de 0 a 86400 (número de segundos em 24 horas)
+            $segundosAleatorios = rand(0, 86400);
+            // Define o created_at e o updated_at manualmente
+            $timestampAleatorio = now()->addSeconds($segundosAleatorios);
+            $transacao->created_at = $timestampAleatorio;
+            $transacao->updated_at = $timestampAleatorio; // Opcional, dependendo se você quer ou não sincronizar o created_at com o updated_at
+
+            // Desabilita a atualização automática de timestamps
+            $transacao->timestamps = false;
 
             // Verifica se o pedido PIX deve ser considerado como "Pago" ou "Pendente"
             if ($i < $quantidadePedidosPixPagos) {
@@ -107,8 +121,19 @@ class ordensController extends Controller
 
             $transacao->ordem_id = $ordens->id;
             $transacao->forma_pagamento = 'Cartão';
-            $transacao->produto_id = Produtos::inRandomOrder()->first()->id;
+            $transacao->nome_produto = $request->nome_produto;
+            $transacao->valor_produto = $request->valor_produto;
             $transacao->data_pagamento = now();
+
+              // Gera um número aleatório de segundos, de 0 a 86400 (número de segundos em 24 horas)
+            $segundosAleatorios = rand(0, 86400);
+            // Define o created_at e o updated_at manualmente
+            $timestampAleatorio = now()->addSeconds($segundosAleatorios);
+            $transacao->created_at = $timestampAleatorio;
+            $transacao->updated_at = $timestampAleatorio; // Opcional
+
+            // Desabilita a atualização automática de timestamps
+            $transacao->timestamps = false;
 
             // Atribui o status com base na porcentagem desejada
             if ($i < ($quantidadePedidosCartao * 0.7)) {
