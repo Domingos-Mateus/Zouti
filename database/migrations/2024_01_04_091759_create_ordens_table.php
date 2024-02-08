@@ -6,15 +6,13 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateOrdensTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('ordens', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('nome_produto');
+            $table->string('valor_produto');
+            $table->string('total_pedidos');
             $table->string('quantidade_pedidos_pix');
             $table->string('percentagem_conversao_pix');
             $table->string('quantidade_pedidos_cartao');
@@ -23,11 +21,6 @@ class CreateOrdensTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('ordens');

@@ -287,7 +287,7 @@
                                 {{$transacao->nome_produto}}
                             </p>
                             <p class="m-0" style="font-size: 13px;">
-                              R$ {{$transacao->preco}}
+                              R$  {{$transacao->valor_produto}}
                             </p>
                           </div>
                         </td>
