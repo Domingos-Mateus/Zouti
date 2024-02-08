@@ -1,9 +1,12 @@
 @extends('dashboard.template')
 
 @section('conteudo')
+
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
+        <!-- Menu -->
+
 
 
         <!-- Layout container -->
@@ -125,28 +128,6 @@
 
           <br><br>
 
-          <div class="">
-            <div class="row px-4 m-0">
-              <div class="col-12 col-md-6 col-lg-6 mt-2">
-                <p class="m-0">
-                  <span style="font-size: 22px; font-weight: bold;">
-                    Transaçoes
-                  </span> <span style="font-size: 15px;">{{$contar}} Registos</span>
-                </p>
-              </div>
-
-               <div class="col-12 col-md-6 col-lg-6 d-lg-flex justify-content-end mt-2">
-                <a href="/transacoes/registar_transacao"> <div>
-                  <button class="col-12 btn btn-primary">
-                    Criar transaçao manual
-                  </button>
-                 </div>
-                </a>
-              </div>
-            </div>
-          </div>
-
-
 
           <div class="container-xxl flex-grow-1 container-p-y">
 
@@ -155,83 +136,101 @@
           <div class="content-wrapper">
             <!-- Content -->
 
+            <div class="">
+            <div class="row px-4 m-0">
+              <div class="col-12 col-md-6 col-lg-6 m-0 p-0">
+                <p class="m-0">
+                  <span style="font-size: 22px; font-weight: bold;">
+                    Transaçoes
+                  </span> <span style="font-size: 15px;">{{$contar}} Registos</span>
+                </p>
+              </div>
+
+              <!--
+               <div class="col-12 col-md-6 col-lg-6 d-lg-flex justify-content-end mt-0">
+                 <div>
+                  <button class="col-12 btn verde">
+                    Criar transaçao manual
+                  </button>
+                 </div>
+              </div>
+              -->
+            </div>
+          </div>
+
             <div class="container-xxl flex-grow-1 container-p-y p-0 m-0">
 
             <!-- Basic Bootstrap Table -->
-              <div class="table-responsive">
-                <table class="table">
-                  <tr>
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Transaçao
-                          </option>
-                        </select>
-                      </div>
-                    </td>
 
-                    <td>
-                      <div style="width: 130px;">
-                        <select name="cliente_id" class="form-select">
-                            <option value="0">Cliente</option>
-                            @foreach ($clientes as $cliente)
-                            <option value="{{$cliente->id}}">{{$cliente->nome}}</option><br>
-                            @endforeach
-                           </select>
-                      </div>
-                    </td>
 
-                    <td>
-                      <div style="width: 210px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Forma de Pagamento
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Status
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Parcelas
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-
-                    <td>
-                      <div style="width: 130px;">
-                        <select class="form-select">
-                          <option selected disabled>
-                            Entrega
-                          </option>
-                        </select>
-                      </div>
-                    </td>
-                  </tr>
-                </table>
-              </div>
-
-              <br>
-
-              <div class="card">
+              <div>
                 <div class="table-responsive text-nowrap">
                   <table class="table">
                     <thead>
                       <tr>
+
+                        <!--
+                    <td>
+                        <select class="form-select filter mb-3">
+                          <option selected disabled>
+                            Transaçao
+                          </option>
+                        </select>
+                    </td>
+                -->
+                    <!--
+                    <td>
+                        <select class="form-select filter mb-3">
+                          <option selected disabled>
+                            Cliente
+                          </option>
+                        </select>
+                    </td>
+                -->
+                    <!--
+                    <td>
+                        <select class="form-select filter mb-3">
+                          <option selected disabled>
+                            Forma de Pagamento
+                          </option>
+                        </select>
+                    </td>
+                -->
+                    <!--
+                    <td>
+                        <select class="form-select filter mb-3">
+                          <option selected disabled>
+                            Status
+                          </option>
+                        </select>
+                    </td>
+                -->
+                    <!--
+                    <td>
+                        <select class="form-select filter mb-3">
+                          <option selected disabled>
+                            Parcelas
+                          </option>
+                        </select>
+                    </td>
+                -->
+                    <!--
+                    <td>
+                        <select class="form-select filter mb-3">
+                          <option selected disabled>
+                            Entrega
+                          </option>
+                        </select>
+                    </td>
+                    -->
+
+                    <td>
+
+                    </td>
+                  </tr>
+
+
+                      <tr class="bg-white">
                         <th>CLIENTE</th>
                         <th>FORMA DE PAGAMENTO</th>
                         <th>STATUS</th>
@@ -246,7 +245,7 @@
                       <tr>
                         <td>
                           <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center;">
+                            <div class="me-2" style="display: inline-flex; width: 40px; height: 40px; color: #fff; justify-content: center; align-items: center; background: #b0b0b0;">
                                 {{$transacao->abreviacao}}
                             </div>
                             <div style="display: inline-block;">
@@ -257,7 +256,8 @@
                         </td>
                         <td>
                           <div style="display: flex; flex-direction: row; align-items: start;">
-                            <div class="bg-primary me-2" style="display: inline-block; width: 40px; height: 40px;">
+                            <div class="me-2" style="display: inline-block; width: 40px; height: 40px; background: #b0b0b0;">
+                                <img src="../../assets/icons/icons-menu/inicio-cinza.png" hidden>
                             </div>
                             <div style="display: inline-block;">
                               <p class="m-0" style="font-weight: bold;">
@@ -269,14 +269,25 @@
                             </div>
                           </div>
                         </td>
-                        <td><span class="badge bg-label-primary me-1">{{$transacao->status}}</span></td>
+                        <td>
+
+
+
+
+                            @if($transacao->status=="Pendente")
+                          <span class="badge bg-label-warning me-1 filter">{{$transacao->status}}</span>
+                          @endif
+                          @if($transacao->status=="Pago")
+                          <span class="badge bg-label-success me-1 filter">{{$transacao->status}}</span>
+                            @endif
+                        </td>
                         <td>
                           <div style="display: inline-block;">
                             <p class="m-0" style="font-weight: bold;">
                                 {{$transacao->nome_produto}}
                             </p>
                             <p class="m-0" style="font-size: 13px;">
-                              R$  {{$transacao->preco}}
+                              R$ {{$transacao->preco}}
                             </p>
                           </div>
                         </td>
@@ -284,8 +295,9 @@
                             {{$transacao->data_pagamento}}
                         </td>
                         <td>
-                          ha 2 semanas
+                            {{ \Carbon\Carbon::parse($transacao->created_at)->diffForHumans() }}
                         </td>
+
                         <td>
                           <div class="dropdown">
                             <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
@@ -303,11 +315,12 @@
                         </td>
                       </tr>
                       @endforeach
-
                     </tbody>
                   </table>
                 </div>
               </div>
+
+
               <!--/ Basic Bootstrap Table -->
 
             </div>
@@ -327,24 +340,24 @@
                     <script>
                       document.write(new Date().getFullYear());
                     </script>
-                    , made with ❤️ by <a href="https://pixinvent.com" target="_blank" class="fw-medium">Pixinvent</a>
+                    , made with ❤️ by <a href="www.devaholic.co" target="_blank" class="fw-medium">www.devaholic.co</a>
                   </div>
                   <div class="d-none d-lg-inline-block">
-                    <a href="https://themeforest.net/licenses/standard" class="footer-link me-4" target="_blank"
+                    <a href="#" class="footer-link me-4" target="_blank"
                       >License</a
                     >
-                    <a href="https://1.envato.market/pixinvent_portfolio" target="_blank" class="footer-link me-4"
+                    <a href="#" target="_blank" class="footer-link me-4"
                       >More Themes</a
                     >
 
                     <a
-                      href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
+                      href="#"
                       target="_blank"
                       class="footer-link me-4"
                       >Documentation</a
                     >
 
-                    <a href="https://pixinvent.ticksy.com/" target="_blank" class="footer-link d-none d-sm-inline-block"
+                    <a href="#" target="_blank" class="footer-link d-none d-sm-inline-block"
                       >Support</a
                     >
                   </div>
@@ -367,6 +380,7 @@
       <div class="drag-target"></div>
     </div>
     <!-- / Layout wrapper -->
+
 
 
 

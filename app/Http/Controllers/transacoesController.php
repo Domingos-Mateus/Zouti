@@ -8,6 +8,7 @@ use App\Models\Clientes;
 use App\Models\Produtos;
 use App\Models\Transacoes;
 use DB;
+use Carbon\Carbon;
 
 class transacoesController extends Controller
 {
@@ -112,4 +113,31 @@ class transacoesController extends Controller
     {
         //
     }
+
+    public function filtrar_transacao(Request $request)
+    {
+        //
+
+        //return $request;
+        $clientes = Clientes::all();
+        $contar = Transacoes::count();
+
+        $query = DB::table('transacoes');
+
+        $query->join('clientes', 'transacoes.cliente_id', '=', 'clientes.id');
+        $query->join('produtos', 'transacoes.produto_id', '=', 'produtos.id');
+        if($request->nome){
+            $query->where('clientes.nome', '=', $request->nome);
+        }
+        if($request->email){
+            $query->where('clientes.email', '=', $request->email);
+        }
+        $query->select('transacoes.*', 'clientes.nome as nome_cliente','clientes.email','clientes.abreviacao', 'produtos.nome_produto','produtos.preco');
+        $transacoes = $query->get();
+
+        return view('dashboard/transacoes', compact('clientes','transacoes','contar'));
+
+    }
+
+
 }

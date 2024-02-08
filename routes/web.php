@@ -86,6 +86,7 @@ Route::get('/dashboard/transacoes', 'App\Http\Controllers\transacoesController@c
 Route::get('/transacoes/registar_transacao', 'App\Http\Controllers\transacoesController@create')->middleware('auth');
 Route::post('/salvar_transacao', 'App\Http\Controllers\transacoesController@store')->middleware('auth');
 Route::get('/dashboard/transacoes', 'App\Http\Controllers\transacoesController@index')->middleware('auth');
+Route::post('/dashboard/filtrar_transacao', 'App\Http\Controllers\transacoesController@filtrar_transacao')->middleware('auth');
 
 //taxas
 Route::get('/dashboard/taxas', 'App\Http\Controllers\taxaController@create')->middleware('auth');

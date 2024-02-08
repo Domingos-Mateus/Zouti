@@ -122,7 +122,7 @@
               <span class="me-3">
                 <img src="../../assets/icons/icons-menu/clientes-cinza.png">
               </span>
-              <div data-i18n="Clientes">Orders</div>
+              <div data-i18n="Orders">Orders</div>
             </a>
           </li>
           <li class="menu-item py-2">
