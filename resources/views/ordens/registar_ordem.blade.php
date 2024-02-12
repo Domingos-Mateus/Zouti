@@ -131,11 +131,11 @@
         @csrf
     <div class="form-group">
       <label for="campo">Nome do Produto:</label>
-      <input type="text" name="nome_produto" class="form-control" id="campo" placeholder="100" required>
+      <input type="text" name="nome_produto" class="form-control" id="campo" placeholder="crédito" required>
     </div>
     <div class="form-group">
         <label for="campo">Valor do Produto:</label>
-        <input type="number" name="valor_produto" class="form-control" id="campo" placeholder="100" required>
+        <input type="text" name="valor_produto" class="form-control" id="campo" placeholder="100,00" required>
       </div>
       <div class="form-group">
         <label for="campo">Quantidade de Pedidos PIX:</label>
