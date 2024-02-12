@@ -10,6 +10,7 @@ use App\Models\Pedidos;
 use App\Models\Pixs;
 use App\Models\Tickets;
 use App\Models\Vendas;
+use App\Models\User;
 
 
 class dashboardsController extends Controller
@@ -29,7 +30,11 @@ class dashboardsController extends Controller
         $tickets = Tickets::count();
         $vendas = Vendas::count();
 
-        return view('dashboard/dashboard', compact('boletos','chargebacks','pedidos','pixs','tickets','vendas'));
+        $usuarios = User::selectRaw('LEFT(name, 1) as primeiro_caractere')->first();
+        //return $usuarios;
+
+
+        return view('dashboard/dashboard', compact('boletos','chargebacks','pedidos','pixs','tickets','vendas','usuarios'));
     }
 
     /**
