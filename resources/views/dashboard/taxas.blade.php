@@ -23,34 +23,10 @@
               <!-- Search -->
               <div class="col-8 d-flex-flex">
                 <a href="index.html" class="app-brand-link">
-              <span class="app-brand-logo demo">
-                <svg width="32" height="22" viewBox="0 0 32 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M0.00172773 0V6.85398C0.00172773 6.85398 -0.133178 9.01207 1.98092 10.8388L13.6912 21.9964L19.7809 21.9181L18.8042 9.88248L16.4951 7.17289L9.23799 0H0.00172773Z"
-                    fill="#7367F0" />
-                  <path
-                    opacity="0.06"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.69824 16.4364L12.5199 3.23696L16.5541 7.25596L7.69824 16.4364Z"
-                    fill="#161616" />
-                  <path
-                    opacity="0.06"
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M8.07751 15.9175L13.9419 4.63989L16.5849 7.28475L8.07751 15.9175Z"
-                    fill="#161616" />
-                  <path
-                    fill-rule="evenodd"
-                    clip-rule="evenodd"
-                    d="M7.77295 16.3566L23.6563 0H32V6.88383C32 6.88383 31.8262 9.17836 30.6591 10.4057L19.7824 22H13.6938L7.77295 16.3566Z"
-                    fill="#7367F0" />
-                </svg>
-              </span>
-              <span class="app-brand-text demo menu-text fw-bold">ZOUTI</span>
-            </a>
+
+                  <!-- Logo zouti -->
+                  <img _ngcontent-lvh-c121="" class="logo" src="https://content.pay.zouti.com.br/tenants/pay.zouti.com.br/logo.png">
+                </a>
               </div>
               <!-- /Search -->
 
@@ -59,8 +35,8 @@
                 <!-- User -->
                 <li class="nav-item navbar-dropdown dropdown-user dropdown">
                   <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online">
-                      <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
+                    <div class="avatar avatar-online rounded-circle text-center pt-1" style="width: 35px; height: 35px; background: rgba(186, 206, 28,1);">
+                        <span style="font-size: 18px; color: #fff;">{{$usuarios->primeiro_caractere}}</span>
                     </div>
                   </a>
                   <ul class="dropdown-menu dropdown-menu-end">
@@ -73,7 +49,7 @@
                             </div>
                           </div>
                           <div class="flex-grow-1">
-                            <span class="fw-medium d-block">John Doe</span>
+                            <span class="fw-medium d-block">{{ Auth::user()->name }}</span>
                             <small class="text-muted">Admin</small>
                           </div>
                         </div>
@@ -85,13 +61,13 @@
                     <li>
                       <a class="dropdown-item" href="pages-profile-user.html">
                         <i class="ti ti-user-check me-2 ti-sm"></i>
-                        <span class="align-middle">Meu Perfil</span>
+                        <span class="align-middle">My Profile</span>
                       </a>
                     </li>
                     <li>
                       <a class="dropdown-item" href="pages-account-settings-account.html">
                         <i class="ti ti-settings me-2 ti-sm"></i>
-                        <span class="align-middle">Definições</span>
+                        <span class="align-middle">Settings</span>
                       </a>
                     </li>
                     <li>
@@ -310,41 +286,7 @@
 
             <!-- / Content -->
 
-            <!-- Footer -->
-            <footer class="content-footer footer bg-footer-theme">
-              <div class="container-xxl">
-                <div
-                  class="footer-container d-flex align-items-center justify-content-between py-2 flex-md-row flex-column">
-                  <div>
-                    ©
-                    <script>
-                      document.write(new Date().getFullYear());
-                    </script>
-                    , made with ❤️ by <a href="https://pixinvent.com" target="_blank" class="fw-medium">Pixinvent</a>
-                  </div>
-                  <div class="d-none d-lg-inline-block">
-                    <a href="https://themeforest.net/licenses/standard" class="footer-link me-4" target="_blank"
-                      >License</a
-                    >
-                    <a href="https://1.envato.market/pixinvent_portfolio" target="_blank" class="footer-link me-4"
-                      >More Themes</a
-                    >
 
-                    <a
-                      href="https://demos.pixinvent.com/vuexy-html-admin-template/documentation/"
-                      target="_blank"
-                      class="footer-link me-4"
-                      >Documentation</a
-                    >
-
-                    <a href="https://pixinvent.ticksy.com/" target="_blank" class="footer-link d-none d-sm-inline-block"
-                      >Support</a
-                    >
-                  </div>
-                </div>
-              </div>
-            </footer>
-            <!-- / Footer -->
 
             <div class="content-backdrop fade"></div>
           </div>

@@ -8,6 +8,7 @@ use App\Models\Clientes;
 use App\Models\Produtos;
 use App\Models\Transacoes;
 use DB;
+use App\Models\User;
 use Carbon\Carbon;
 
 class transacoesController extends Controller
@@ -25,11 +26,16 @@ class transacoesController extends Controller
         $transacoes = DB::table('transacoes')
             ->join('clientes', 'transacoes.cliente_id', '=', 'clientes.id')
             ->select('transacoes.*', 'clientes.nome as nome_cliente', 'clientes.email', 'clientes.abreviacao')
-            ->where('transacoes.created_at', '<=', now()) // Adiciona a cláusula where para filtrar por created_at
-            ->get();
+            ->where('transacoes.created_at', '<=', now()) // Filtra por created_at
+            ->orderBy('transacoes.created_at', 'desc') // Ordena por data de forma descendente
+            ->paginate(20); // Adiciona paginação com 20 itens por página
 
-        return view('dashboard/transacoes', compact('clientes', 'transacoes', 'contar'));
+            $usuarios = User::selectRaw('LEFT(name, 1) as primeiro_caractere')->first();
+
+        return view('dashboard/transacoes', compact('clientes', 'transacoes', 'contar','usuarios'));
     }
+
+
 
 
     /**

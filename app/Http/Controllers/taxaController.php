@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\User;
 
 class taxaController extends Controller
 {
@@ -24,7 +25,9 @@ class taxaController extends Controller
     public function create()
     {
         //
-        return view('dashboard/taxas');
+        $usuarios = User::selectRaw('LEFT(name, 1) as primeiro_caractere')->first();
+        //return $usuarios;
+        return view('dashboard/taxas',  compact('usuarios'));
     }
 
     /**
