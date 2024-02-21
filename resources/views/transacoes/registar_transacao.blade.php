@@ -172,6 +172,7 @@
         <select name="status" class="form-control" id="campo">
             <option value="pago">pago</option>
             <option value="pendente">pendente</option>
+            <option value="recusado">recusado</option>
         </select>
     </div>
 

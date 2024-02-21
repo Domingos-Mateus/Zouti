@@ -1,0 +1,214 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+  font-family: Rubik, sans-serif !important;
+}
+
+.verde {
+	background-color: rgba(186, 206, 28,1); 
+}
+
+.filter {
+	border-radius: 50px;
+}
+
+.active-menu {
+	border-left: 4px solid rgba(186, 206, 28,1);
+	background-color: rgba(186, 206, 28,0.28);
+}
+
+.meu-menu div {
+	font-size: 13.5px !important;
+	padding: 0 !important;
+}
+
+li.meu-menu {
+	margin: 0 !important;
+}
+
+.meu-menu a {
+	margin: 0 !important;
+}
+
+.meu-menu:hover {
+	background: rgba(0,0,0,0.78);
+}
+
+.meu-menu .menu-link:hover {
+	background: transparent !important;
+}
+
+.fw-medium {
+	font-size: 22px;
+}
+
+.titulo-setas {
+	opacity: 0.4;
+	font-size: 14px;
+}
+
+body {
+	color: #000 !important;
+	background: rgb(246, 250, 248) !important;
+}
+
+.text-dashboard {
+	font-size: 20px;
+	font-weight: bold; font-size: 22px;
+}
+
+.text-under-dashboard {
+	font-size: 14px;	
+	opacity: 0.4;
+}
+
+/* Tabela Transações */
+.status-transacoes {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 100px;
+}
+
+.pago {
+	border: 2px solid green;
+}
+
+.pendente {
+	border: 2px solid orange;
+}
+
+.recusado {
+	border: 2px solid red;
+}
+
+.data-status {
+	font-size: 11.5px; margin-top: 5px;
+	display: none;
+}
+
+.filter-select li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.filter-select li:nth-child(1) {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.filter-select li .filter {
+	border-radius: 20px;
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+}
+
+.td-cliente {
+	width: 160px;
+	overflow: hidden;
+}
+
+.td-produto {
+	width: 140px;
+	overflow: hidden;
+}
+
+.td-headers {
+	width: 100px;
+}
+
+.text-11 {
+	font-size: 11px;
+}
+
+.text-11-5 {
+	font-size: 11.5px;
+}
+
+.text-13 {
+	font-size: 13px;
+}
+
+.text-13-5 {
+	font-size: 13.5px;
+}
+
+.text-14 {
+	font-size: 14px;
+}
+
+.text-16 {
+	font-size: 16px;
+}
+
+.text-21 {
+	font-size: 21px;
+}
+
+.text-22 {
+	font-size: 21px;
+}
+
+.table td, .table th {
+	padding-right: 0 !important;
+	padding-left: 8px !important;
+}
+
+.box-cliente {
+	display: inline-flex; 
+	width: 1px; 
+	height: 32px; color: #fff; 
+	justify-content: center; 
+	align-items: center; background: #b0b0b0
+}
+
+.td-min {
+	width: 150px;
+	overflow: hidden;
+}
+
+.td-min-2 {
+	width: 200px;
+	overflow: hidden;
+}
+
+.th-table {
+	font-size: 11.5px !important;
+}
+
+/* Grafico circular*/
+.custom-blue {
+  --chart-color: #007bff;
+}
+
+.custom-green {
+  --chart-color: #BACE1C;
+}
+
+.custom-orange {
+  --chart-color: #fd7e14;
+}
+
+.custom-purple {
+  --chart-color: #6f42c1;
+}
+
+.custom-red {
+  --chart-color: #ed6b78;
+}
+
+ul.p-0.m-0 li.d-flex {
+	margin: 0;
+	padding: 0;
+}
+
+ul.p-0.m-0 .chart-progress {
+  margin-right: 1rem; /* Ajusta a margem direita dos gráficos, se necessário */
+}
+
+
+/* Calendario Js*/
+
+
+/* Empreendimento*/

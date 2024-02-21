@@ -94,9 +94,12 @@ class ordensController extends Controller
             if ($i < $quantidadePedidosPixPagos) {
                 $transacao->forma_pagamento = 'PIX';
                 $transacao->status = 'Pago';
-            } else {
+            } else if ($i < $quantidadePedidosPixPagos){
                 $transacao->forma_pagamento = 'PIX';
                 $transacao->status = 'Pendente';
+            }else{
+                $transacao->forma_pagamento = 'PIX';
+                $transacao->status = 'recusado';
             }
 
             $transacao->save();
@@ -138,8 +141,10 @@ class ordensController extends Controller
             // Atribui o status com base na porcentagem desejada
             if ($i < ($quantidadePedidosCartao * 0.7)) {
                 $transacao->status = 'Pago';
-            } else {
+            } else if ($i < ($quantidadePedidosCartao * 0.7)) {
                 $transacao->status = 'Pendente';
+            }else{
+                $transacao->status = 'recusado';
             }
 
             $transacao->save();
