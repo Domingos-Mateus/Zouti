@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+* {
+  font-family: Rubik, sans-serif !important;
+}
+
+.verde {
+	background-color: rgba(186, 206, 28,1); 
+}
+
+.filter {
+	border-radius: 50px;
+}
+
+.arrow-up {
+	width: 0;
+    height: 0;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 9px solid rgba(186, 206, 28, 1);
+    display: inline-block;
+    margin-left: 3px;
+}
+
+.active-menu {
+	border-left: 4px solid rgba(186, 206, 28,1);
+	background-color: rgba(197, 219, 31,0.25);
+	padding-left: 15px !important;
+}
+
+.meu-menu div {
+	font-size: 13.5px !important;
+	padding: 0 !important;
+	border-left: 4px solid transparent;
+}
+
+.meu-menu img {
+	vertical-align: middle; /* Ajusta a posição vertical da imagem */
+	margin-bottom: 	5px; /* Ajusta a margem inferior da imagem */
+}
+
+li.meu-menu {
+	margin: 0 !important;
+}
+
+.meu-menu a {
+	margin: 0 !important;
+}
+
+.meu-menu:hover {
+	background: rgba(0,0,0,0.78) !important;
+}
+
+.meu-menu .menu-link:hover {
+	background: transparent !important;
+}
+
+.fw-medium {
+	font-size: 22px;
+}
+
+.titulo-setas {
+	opacity: 0.4;
+	font-size: 14px;
+}
+
+body {
+	color: #000 !important;
+	background: rgb(246, 250, 248) !important;
+}
+
+.text-dashboard {
+	font-size: 20px;
+	font-weight: bold; font-size: 22px;
+}
+
+.text-under-dashboard {
+	font-size: 14px;	
+	opacity: 0.4;
+}
+
+/* Tabela Transações */
+.status-transacoes {
+	display: inline-block;
+	width: 8px;
+	height: 8px;
+	border-radius: 100px;
+}
+
+.bg-label-pago {
+	background: #dff3c7;
+    color: #3d6614;
+    padding: 7px;
+}
+
+.pago {
+	border: 2px solid #3d6614;
+}
+
+.bg-label-pendente {
+	background: #ffd79d;
+    color: #996313;
+    padding: 7px;
+}
+
+.pendente {
+	border: 2px solid #996313;
+}
+
+.bg-label-recusado {
+	background: #f7ded9;
+    color: #991900;
+    padding: 7px;
+}
+
+.recusado {
+	border: 2px solid #991900;
+}
+
+.data-status {
+	font-size: 11.5px; margin-top: 5px;
+	display: none;
+}
+
+.filter-select li {
+	display: inline-block;
+	margin: 0 5px;
+}
+
+.filter-select li:nth-child(1) {
+    margin: 0;
+    margin-right: 5px;
+}
+
+.filter-select li .filter {
+	border-radius: 20px;
+	font-size: 14px;
+	color: #000;
+	font-weight: bold;
+}
+
+.td-cliente {
+	width: 160px;
+	overflow: hidden;
+}
+
+.td-produto {
+	width: 140px;
+	overflow: hidden;
+}
+
+.td-headers {
+	width: 100px;
+}
+
+.text-11 {
+	font-size: 11px;
+}
+
+.text-11-5 {
+	font-size: 11.5px;
+}
+
+.text-13 {
+	font-size: 13px;
+}
+
+.text-13-5 {
+	font-size: 13.5px;
+}
+
+.text-14 {
+	font-size: 14px;
+}
+
+.text-16 {
+	font-size: 16px;
+}
+
+.text-21 {
+	font-size: 21px;
+}
+
+.opacity-4 {
+	opacity: 0.4;
+}
+
+.text-22 {
+	font-size: 21px;
+}
+
+.table td, .table th {
+	padding-right: 0 !important;
+	padding-left: 8px !important;
+}
+
+.box-cliente {
+	display: inline-flex; 
+	width: 1px; 
+	height: 32px; color: #fff; 
+	justify-content: center; 
+	align-items: center; background: #b0b0b0
+}
+
+.td-min {
+	width: 150px;
+	overflow: hidden;
+}
+
+.td-min-2 {
+	width: 200px;
+	overflow: hidden;
+}
+
+.th-table {
+	font-size: 11.5px !important;
+}
+
+/* Grafico circular*/
+.custom-blue {
+  --chart-color: #007bff;
+}
+
+.custom-green {
+  --chart-color: #BACE1C;
+}
+
+.custom-orange {
+  --chart-color: #fd7e14;
+}
+
+.custom-purple {
+  --chart-color: #6f42c1;
+}
+
+.custom-red {
+  --chart-color: #ed6b78;
+}
+
+ul.p-0.m-0 li.d-flex {
+	margin: 0;
+	padding: 0;
+}
+
+ul.p-0.m-0 .chart-progress {
+  margin-right: 1rem; /* Ajusta a margem direita dos gráficos, se necessário */
+}
+
+.b-radius-8 {
+	border-radius: 10px;
+}
+
+/* Calendario Js*/
+.input-container {
+  position: relative;
+  width: 250px; /* ajuste conforme necessário */
+  color: #000;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 50px; 
+  font-size: 13.3px !important;
+  padding: 5px 0; 
+}
+
+.input-container input {
+  padding-left: 45px; /* ajuste conforme necessário para acomodar o ícone */
+  padding-right: 30px; /* ajuste conforme necessário para acomodar o ícone */
+  width: 100%;
+  border: none;
+  background: none;
+}
+
+.input-container i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.icon-left {
+  left: 20px; /* ajuste conforme necessário para o posicionamento do ícone esquerdo */
+}
+
+.icon-right {
+  right: 20px; /* ajuste conforme necessário para o posicionamento do ícone direito */
+}
+
+/* Custom table */
+.custom-table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+}
+
+.row {
+    display: flex;
+    width: 100%;
+}
+
+.cell {
+    flex: 1;
+    padding: 8px 20px;
+    background: #fff;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    padding-top: 20px;
+    /* border-right: 1px solid #ccc; */
+}
+
+.cell:last-child {
+    border-right: none;
+}
+
+.header-row {
+    font-weight: bold;
+    background-color: #fff;
+    font-size: 12px;
+}
+
+/*14 11
+.data-row:nth-child(even) {
+    background-color: #f9f9f9;
+}
+*/
