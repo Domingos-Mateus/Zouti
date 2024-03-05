@@ -2,115 +2,12 @@
 
 @section('conteudo')
 
-        <!-- Layout container -->
-        <div class="layout-page">
-          <!-- Navbar -->
-
-          <nav
-            class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-            id="layout-navbar" style="box-shadow: 0 0 1px rgba(0, 0, 0, 0.5);">
-
-            <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-              <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-                <i class="ti ti-menu-2 ti-sm"></i>
-              </a>
-            </div>
-
-            <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-              <!-- Search -->
-              <div class="col-8 col-md-6 d-flex-flex">
-                <a href="index.html" class="app-brand-link">
-
-                  <!-- Logo zouti -->
-                  <img _ngcontent-lvh-c121="" class="logo" src="https://content.pay.zouti.com.br/tenants/pay.zouti.com.br/logo.png">
-                </a>
-              </div>
-              <!-- /Search -->
-
-              <ul class="navbar-nav flex-row align-items-center ms-auto pe-lg-4">
-
-                <!-- User -->
-                <li class="nav-item navbar-dropdown dropdown-user dropdown">
-                  <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-                    <div class="avatar avatar-online rounded-circle text-center pt-1" style="width: 30px; height: 30px; background: rgba(186, 206, 28,1);">
-                        <span style="font-size: 16px; color: #fff; font-weight: bold;">L</span>
-                    </div>
-                  </a>
-                  <ul class="dropdown-menu dropdown-menu-end">
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-profile-user.html">
-                        <i class="ti ti-user-check me-2 ti-sm"></i>
-                        <span class="align-middle">My Profile</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-account.html">
-                        <i class="ti ti-settings me-2 ti-sm"></i>
-                        <span class="align-middle">Settings</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-account-settings-billing.html">
-                        <span class="d-flex align-items-center align-middle">
-                          <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
-                          <span class="flex-grow-1 align-middle">Billing</span>
-                          <span class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
-                            >2</span
-                          >
-                        </span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-faq.html">
-                        <i class="ti ti-help me-2 ti-sm"></i>
-                        <span class="align-middle">FAQ</span>
-                      </a>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="pages-pricing.html">
-                        <i class="ti ti-currency-dollar me-2 ti-sm"></i>
-                        <span class="align-middle">Pricing</span>
-                      </a>
-                    </li>
-                    <li>
-                      <div class="dropdown-divider"></div>
-                    </li>
-                    <li>
-                      <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-                        <i class="ti ti-logout me-2 ti-sm"></i>
-                        <span class="align-middle">Log Out</span>
-                      </a>
-                    </li>
-                  </ul>
-                </li>
-                <!--/ User -->
-                <li class="ps-md-1 d-none d-lg-inline-block">
-                  <h2 style="font-size: 14px; font-weight: bold; color: #000; padding-top: 15px; padding-left: 5px;">Nome completo do user
-                  </h2>
-                </li>
-              </ul>
-            </div>
-
-            <!-- Search Small Screens -->
-            <div class="navbar-search-wrapper search-input-wrapper d-none">
-              logo
-            </div>
-          </nav>
-          <!-- / Navbar -->
-
-          <div class="container-xxl flex-grow-1 container-p-y">
-
-
-          <!-- Content wrapper -->
-          <div class="content-wrapper">
+    <div id="content" style="padding-top: 70px;">
+        <div class="pd-content">
+            <div class="content-wrapper">
             <!-- Content -->
 
+            <div style="margin-bottom: 25px;">
             <div class="d-none d-lg-block">
             <div class="row py-2 m-0">
               <div class="col-12 col-md-6 col-lg-6 m-0 p-0">
@@ -123,13 +20,15 @@
 
                <div class="col-12 col-md-6 col-lg-6 d-lg-flex justify-content-end mt-0">
                  <div>
-                  <button class="col-12 btn" style="background-color: rgba(186, 206, 28,1); color: #000;">
-                    Criar transação manual
+                  <button class="col-12 btn" style="background-color: rgba(186, 206, 28,1); color: #000; font-weight: 600; padding: 5px 25px;">
+                    <span class="fa fa-plus" style="font-size: 18px;"></span>
+                    <span style="font-size: 13px;">Criar transação manual</span>
                   </button>
                  </div>
               </div>
             </div>
           </div>
+
 
           <div class="d-lg-none">
             <div class="row py-2 m-0">
@@ -140,9 +39,11 @@
                   </span>
                 </p>
                 <p class="m-0">
-                  <span style="font-size: 14px; opacity: 0.7;">{{$contar}} Registos</span>
+                  <span style="font-size: 14px; opacity: 0.7;">2.364 Registos</span>
                 </p>
               </div>
+
+
             </div>
             <div>
                 <select class="form-select" style="width: 120px; color: #000;">
@@ -157,6 +58,7 @@
                 </select>
               </div>
           </div>
+        </div>
 
             <div class="container-xxl flex-grow-1 container-p-y p-0 m-0">
 
@@ -164,99 +66,382 @@
 
               <div>
                 <div style="overflow-x: auto; white-space: nowrap;">
+                    <!--
+    <ul class="filter-select" style="list-style: none; padding: 0; margin: 0;">
+        <li>
+            <select class="form-select filter mb-3">
+              <option selected disabled>Transação</option>
+            </select>
+        </li>
 
+        <li>
+            <select class="form-select filter mb-3">
+              <option selected disabled>Cliente</option>
+            </select>
+        </li>
+
+        <li>
+            <select class="form-select filter mb-3">
+              <option selected disabled>Forma de Pagamento</option>
+            </select>
+        </li>
+
+        <li >
+            <select class="form-select filter mb-3">
+              <option selected disabled>Status</option>
+            </select>
+        </li>
+
+        <li >
+            <select class="form-select filter mb-3">
+              <option selected disabled>Parcelas</option>
+            </select>
+        </li>
+
+        <li >
+            <select class="form-select filter mb-3">
+              <option selected disabled>Entrega</option>
+            </select>
+        </li>
+    </ul>
+
+    -->
 </div>
 
 
-                <div class="table-responsive text-nowrap" style="border: 1px solid rgba(0,0,0,0.1);">
-                  <table class="table">
-                    <thead>
-                      <tr class="bg-white">
-                        <th><div class="th-table td-min-2">CLIENTE</div></th>
-                        <th><div class="th-table td-min">FORMA DE <br> PAGAMENTO</div></th>
-                        <th><div class="th-table td-min">STATUS</div></th>
-                        <th><div class="th-table td-min-2">PRODUTO</div></th>
-                        <th><div class="th-table td-min">DATA DA TRANSAÇAO</div></th>
-                        <th><div class="th-table td-min">DATA DE PAGAMENTO</div></th>
-                      </tr>
-                    </thead>
-                    <tbody class="table-border-bottom-0 bg-white">
-                        @foreach($transacoes as $transacao)
-                      <tr>
-                        <td>
-                          <div class="td-min-2">
-                          <div style="display: flex; flex-direction: row; align-items: start;">
+                <div class="table-responsive text-nowrap">
+                  <div class="custom-table">
+    <div class="row header-row hidden-th" style="color: rgba(0,0,0,0.7) !important;">
+        <div class="cell td-min-2" style="padding: 22px 20px;">CLIENTE</div>
+        <div class="cell td-min" style="padding: 22px 20px;">FORMA DE PAGAMENTO</div>
+        <div class="cell td-min" style="padding: 22px 20px;">STATUS</div>
+        <div class="cell td-min-2" style="padding: 22px 20px;">PRODUTO</div>
+        <div class="cell td-min" style="padding: 22px 20px;">DATA DA TRANSAÇÃO</div>
+        <div class="cell td-min" style="padding: 22px 20px;">DATA DE PAGAMENTO</div>
+    </div>
+
+
+
+    @foreach($transacoes as $transacao)
+
+
+    <div class="row data-row row-mb">
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: flex; flex-direction: row; align-items: start;">
                             <div class="me-2" style="display: inline-flex; width: 32px; height: 32px; color: #fff; justify-content: center; align-items: center; background: #b0b0b0; padding: 0 10px;">
                                 {{$transacao->abreviacao}}
                             </div>
                             <div style="display: inline-block;">
                               <p class="m-0" style="font-size: 14px;">{{$transacao->nome_cliente}}</p>
-                              <p class="m-0" style="font-size: 11.5px;">{{$transacao->email}}</p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">{{$transacao->email}}</p>
+                            </div>
+          </div>
+        </div>
+        <div class="cell td-min">
+            <div>
+                @if($transacao->forma_pagamento=="PIX")
+          <div style="display: flex; flex-direction: row; align-items: start;">
+
+                            <div class="me-2" style="display: inline-block; width: 32px; height: 32px;">
+                                <img src="../icons/icons-transacoes/icon-pix.png">
+                            </div>
+
+                            <div style="display: inline-block;">
+                              <p class="m-0" style=" font-size: 14px;">
+                                R$ 123,48
+                              </p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">
+                                {{$transacao->forma_pagamento}}
+                              </p>
                             </div>
                           </div>
-                          </div>
-                        </td>
-                        <td>
-                          <div class="td-min">
-                          <div style="display: flex; flex-direction: row; align-items: start;">
+        </div>
+        @endif
+
+        @if($transacao->forma_pagamento=="Cartão")
+          <div style="display: flex; flex-direction: row; align-items: start;">
+
                             <div class="me-2" style="display: inline-block; width: 32px; height: 32px;">
-                                <img src="../../assets/icons/icons-transacoes/icon-pix.png">
+                                <img src="../icons/icons-transacoes/icon-visa.png">
+                            </div>
+
+                            <div style="display: inline-block;">
+                              <p class="m-0" style=" font-size: 14px;">
+                                R$ 123,48
+                              </p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">
+                                {{$transacao->forma_pagamento}}
+                              </p>
+                            </div>
+                          </div>
+        </div>
+        @endif
+
+    </div>
+        <div class="cell td-min">
+          <div class="justify-content-end-end">
+            <div>
+                             <div>
+                                @if($transacao->status=="Pendente")
+                                <span class="badge bg-label-pendente me-1 filter">
+                                  <div class="status-transacoes pendente"></div>
+                                  {{$transacao->status}}
+                                </span>
+                                @endif
+
+                                @if($transacao->status=="Pago")
+                                <span class="badge bg-label-pago me-1 filter">
+                                  <div class="status-transacoes pago"></div>
+                                  {{$transacao->status}}
+                                </span>
+                                @endif
+
+                                @if($transacao->status=="recusado")
+                                <span class="badge bg-label-recusado me-1 filter">
+                                  <div class="status-transacoes recusado"></div>
+                                  {{$transacao->status}}
+                                </span>
+                                @endif
+                              </div>
+
+                              <div class="data-status">
+                                22 de dez. 00:10
+                              </div>
+                            </div>
+                            </div>
+        </div>
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: inline-block;">
+                            <p class="m-0" style=" font-size: 14px;">
+                                {{$transacao->nome_produto}}
+                            </p>
+                            <p class="m-0" style="font-size: 11.5px;">
+                                R$  {{$transacao->valor_produto}}
+                            </p>
+                          </div>
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">{{$transacao->data_pagamento}}</span>
+                          </div>
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">{{ \Carbon\Carbon::parse($transacao->created_at)->diffForHumans() }}</span>
+                          <div>
+        </div>
+    </div>
+    <!-- Adicione mais linhas de dados conforme necessário -->
+</div>
+
+                </div>
+                @endforeach
+
+                <div class="row data-row row-mb">
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: flex; flex-direction: row; align-items: start;">
+                            <div class="me-2" style="display: inline-flex; width: 32px; height: 32px; color: #fff; justify-content: center; align-items: center; background: #b0b0b0; padding: 0 10px;">
+                              AL
+                            </div>
+                            <div style="display: inline-block;">
+                              <p class="m-0" style="font-size: 14px;">Alexandre Gonsalves Pinheiro</p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">alexandrepinheiro@gmail.com</p>
+                            </div>
+                          </div>
+        </div>
+        <div class="cell td-min">
+          <div style="display: flex; flex-direction: row; align-items: start;">
+                            <div class="me-2" style="display: inline-block; width: 32px; height: 32px;">
+                                <img src="../icons/icons-transacoes/icon-visa.png">
                             </div>
                             <div style="display: inline-block;">
                               <p class="m-0" style=" font-size: 14px;">
                                 R$ 123,48
                               </p>
-                              <p class="m-0" style="font-size: 11.5px;">
-                                {{$transacao->forma_pagamento}}
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">
+                                Vence em 24/12
                               </p>
                             </div>
                           </div>
+        </div>
+        <div class="cell td-min">
+          <div class="justify-content-end-end">
+          <div>
+                             <div>
+                                <span class="badge bg-label-pago me-1 filter">
+                                  <div class="status-transacoes pago"></div>
+                                  Pago
+                                </span>
+                              </div>
+                              <div class="data-status">
+                                22 de dez. 00:10
+                              </div>
+                            </div>
                           </div>
-                        </td>
-                        <td>
-                          <div class="td-min">
-                         <div>
-                            @if($transacao->status=="Pendente")
-                          <span class="badge bg-label-warning me-1 filter">{{$transacao->status}}</span>
-                          @endif
-                          @if($transacao->status=="Pago")
-                          <span class="badge bg-label-success me-1 filter">{{$transacao->status}}</span>
-                            @endif
-                            @if($transacao->status=="recusado")
-                            <span class="badge bg-label-danger me-1 filter">{{$transacao->status}}</span>
-                            @endif
-
-
-                        </td>
-                        <td>
-                          <div class="td-min-2">
-                          <div style="display: inline-block;">
+        </div>
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: inline-block;">
                             <p class="m-0" style=" font-size: 14px;">
-                                {{$transacao->nome_produto}}
+                              KIT COM 3 PARES - TENIS
                             </p>
                             <p class="m-0" style="font-size: 11.5px;">
-                              R$ {{$transacao->valor_produto}}
+                              R$ 123,48
                             </p>
                           </div>
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">22 de dez. 00:10</span>
                           </div>
-                        </td>
-                        <td style="font-size: 11.5px;">
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">ha 2 semanas</span>
                           <div>
-                            {{$transacao->data_pagamento}}
-                          </div>
-                        </td>
-                        <td style="font-size: 11.5px;">
-                          <div>
-                            {{ \Carbon\Carbon::parse($transacao->created_at)->diffForHumans() }}
-                          <div>
-                        </td>
-                      </tr>
+        </div>
+    </div>
+    <!-- Adicione mais linhas de dados conforme necessário -->
+</div>
 
-                      <tr>
-                        @endforeach
-                    </tbody>
-                  </table>
                 </div>
+
+
+                <div class="row data-row row-mb">
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: flex; flex-direction: row; align-items: start;">
+                            <div class="me-2" style="display: inline-flex; width: 32px; height: 32px; color: #fff; justify-content: center; align-items: center; background: #b0b0b0; padding: 0 10px;">
+                              AL
+                            </div>
+                            <div style="display: inline-block;">
+                              <p class="m-0" style="font-size: 14px;">Alexandre Gonsalves Pinheiro</p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">alexandrepinheiro@gmail.com</p>
+                            </div>
+                          </div>
+        </div>
+        <div class="cell td-min">
+          <div style="display: flex; flex-direction: row; align-items: start;">
+                            <div class="me-2" style="display: inline-block; width: 32px; height: 32px;">
+                                <img src="../icons/icons-transacoes/icon-elo.png">
+                            </div>
+                            <div style="display: inline-block;">
+                              <p class="m-0" style=" font-size: 14px;">
+                                R$ 123,48
+                              </p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">
+                                Vence em 24/12
+                              </p>
+                            </div>
+                          </div>
+        </div>
+        <div class="cell td-min">
+          <div class="justify-content-end-end">
+          <div>
+                             <div>
+                                <span class="badge bg-label-recusado me-1 filter">
+                                  <div class="status-transacoes recusado"></div>
+                                  Recusado
+                                </span>
+                              </div>
+                              <div class="data-status">
+                                22 de dez. 00:10
+                              </div>
+                            </div>
+                          </div>
+        </div>
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: inline-block;">
+                            <p class="m-0" style=" font-size: 14px;">
+                              KIT COM 3 PARES - TENIS
+                            </p>
+                            <p class="m-0" style="font-size: 11.5px;">
+                              R$ 123,48
+                            </p>
+                          </div>
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">22 de dez. 00:10</span>
+                          </div>
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">ha 2 semanas</span>
+                          <div>
+        </div>
+    </div>
+    <!-- Adicione mais linhas de dados conforme necessário -->
+</div>
+
+                </div>
+
+<div class="row data-row row-mb">
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: flex; flex-direction: row; align-items: start;">
+                            <div class="me-2" style="display: inline-flex; width: 32px; height: 32px; color: #fff; justify-content: center; align-items: center; background: #b0b0b0; padding: 0 10px;">
+                              AL
+                            </div>
+                            <div style="display: inline-block;">
+                              <p class="m-0" style="font-size: 14px;">Alexandre Gonsalves Pinheiro</p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">alexandrepinheiro@gmail.com</p>
+                            </div>
+                          </div>
+        </div>
+        <div class="cell td-min">
+          <div style="display: flex; flex-direction: row; align-items: start;">
+                            <div class="me-2" style="display: inline-block; width: 32px; height: 32px;">
+                                <img src="../icons/icons-transacoes/icon-master.png">
+                            </div>
+                            <div style="display: inline-block;">
+                              <p class="m-0" style=" font-size: 14px;">
+                                R$ 123,48
+                              </p>
+                              <p class="m-0 opacity-4" style="font-size: 11.5px;">
+                                Vence em 24/12
+                              </p>
+                            </div>
+                          </div>
+        </div>
+        <div class="cell td-min">
+          <div class="justify-content-end-end">
+          <div>
+                             <div>
+                                <span class="badge bg-label-recusado me-1 filter">
+                                  <div class="status-transacoes recusado"></div>
+                                  Recusado
+                                </span>
+                              </div>
+                              <div class="data-status">
+                                22 de dez. 00:10
+                              </div>
+                            </div>
+                          </div>
+        </div>
+        <div class="cell td-min-2 hidden-th">
+          <div style="display: inline-block;">
+                            <p class="m-0" style=" font-size: 14px;">
+                              KIT COM 3 PARES - TENIS
+                            </p>
+                            <p class="m-0" style="font-size: 11.5px;">
+                              R$ 123,48
+                            </p>
+                          </div>
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">22 de dez. 00:10</span>
+                          </div>
+        </div>
+        <div class="cell td-min hidden-th">
+           <div>
+                          <span class="text-13 opacity-4">ha 2 semanas</span>
+                          <div>
+        </div>
+    </div>
+    <!-- Adicione mais linhas de dados conforme necessário -->
+</div>
+
+                </div>
+
               </div>
 
               <div class="py-4">
@@ -268,8 +453,6 @@
               <!--/ Basic Bootstrap Table -->
 
             </div>
-
-            <i class="fa fa-arrow-left fa-xs">{{ $transacoes->links() }}</i>
             <!--  Topic and Instructors  End-->
 
 
@@ -280,17 +463,7 @@
 
             <div class="content-backdrop fade"></div>
           </div>
-          <!-- Content wrapper -->
         </div>
-        <!-- / Layout page -->
-      </div>
-
-      <!-- Overlay -->
-      <div class="layout-overlay layout-menu-toggle"></div>
-
-      <!-- Drag Target Area To SlideIn Menu On Small Screens -->
-      <div class="drag-target"></div>
     </div>
-    <!-- / Layout wrapper -->
 
     @endsection

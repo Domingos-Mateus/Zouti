@@ -5,7 +5,7 @@
 }
 
 .verde {
-	background-color: rgba(186, 206, 28,1);
+	background-color: rgba(186, 206, 28,1); 
 }
 
 .filter {
@@ -75,7 +75,7 @@ body {
 }
 
 .text-under-dashboard {
-	font-size: 14px;
+	font-size: 14px;	
 	opacity: 0.4;
 }
 
@@ -195,10 +195,10 @@ body {
 }
 
 .box-cliente {
-	display: inline-flex;
-	width: 1px;
-	height: 32px; color: #fff;
-	justify-content: center;
+	display: inline-flex; 
+	width: 1px; 
+	height: 32px; color: #fff; 
+	justify-content: center; 
 	align-items: center; background: #b0b0b0
 }
 
@@ -257,9 +257,9 @@ ul.p-0.m-0 .chart-progress {
   color: #000;
   background: #fff;
   border: 1px solid rgba(0,0,0,0.1);
-  border-radius: 50px;
+  border-radius: 50px; 
   font-size: 13.3px !important;
-  padding: 5px 0;
+  padding: 5px 0; 
 }
 
 .input-container input {
@@ -320,9 +320,3 @@ ul.p-0.m-0 .chart-progress {
     background-color: #f9f9f9;
 }
 */
-
-.menu-links a{
-    text-decoration: none;
-    display: none !important;
-
-}
