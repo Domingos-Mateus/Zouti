@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Models\Clientes;
+use App\Models\User;
 
 class clientesController extends Controller
 {
@@ -17,7 +18,8 @@ class clientesController extends Controller
     {
         //
         $clientes = Clientes::all();
-        return view('clientes/listar_clientes', compact('clientes'));
+        $usuarios = User::selectRaw('LEFT(name, 1) as primeiro_caractere')->first();
+        return view('clientes/listar_clientes', compact('clientes','usuarios'));
     }
 
     /**
@@ -28,7 +30,9 @@ class clientesController extends Controller
     public function create()
     {
         //
-        return view('clientes/registar_cliente');
+        $usuarios = User::selectRaw('LEFT(name, 1) as primeiro_caractere')->first();
+        return view('clientes/registar_cliente', compact('usuarios'));
+       // return view('clientes/registar_cliente');
     }
 
     /**

@@ -1,166 +1,123 @@
+<!DOCTYPE html>
+
+<html
+  lang="en"
+  class="light-style layout-navbar-fixed layout-menu-fixed layout-compact"
+  dir="ltr"
+  data-theme="theme-default"
+  data-assets-path="../../assets/"
+  data-template="vertical-menu-template">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+
+    <title>zouti</title>
+
+    <meta name="description" content="" />
+
+    <!-- Favicon -->
+
+    <!-- Fonts -->
+
+    <!-- Icons -->
+
+    <!-- Core CSS -->
+    <link rel="stylesheet" href="../../assets/css/demo.css" />
+
+
+    <!-- Page CSS -->
+
+    <!-- Helpers -->
+    <script src="../../assets/vendor/js/helpers.js"></script>
+    <!--! Template customizer & Theme config files MUST be included after core stylesheets and helpers.js in the <head> section -->
+    <!--? Template customizer: To hide customizer set displayCustomizer value false in config.js.  -->
+    <script src="../../assets/vendor/js/template-customizer.js"></script>
+    <!--? Config:  Mandatory theme config file contain global vars & default theme options, Set your preferred theme option in this file.  -->
+    <script src="../../assets/js/config.js"></script>
+
+    <style type="text/css">
+        @media (max-width: 1199px) {
+          .d-flex-flex {
+            display: flex;
+            justify-content: center;
+          }
+        }
+    </style>
+  </head>
+
+  <body>
+
 @extends('dashboard.template')
 
-@section('conteudo')
-     <!-- Navbar -->
+@section('conteudo')<style>
+    .container {
+        margin-left: 6cm;
+    }
 
-     <nav
-     class="layout-navbar container-xxl navbar navbar-expand-xl navbar-detached align-items-center bg-navbar-theme"
-     id="layout-navbar">
-     <div class="layout-menu-toggle navbar-nav align-items-xl-center me-3 me-xl-0 d-xl-none">
-       <a class="nav-item nav-link px-0 me-xl-4" href="javascript:void(0)">
-         <i class="ti ti-menu-2 ti-sm"></i>
-       </a>
-     </div>
+    .btn-custom {
+        color: rgba(197, 219, 31);
+        text-decoration: none;
+    }
 
-     <div class="navbar-nav-right d-flex align-items-center" id="navbar-collapse">
-       <!-- Search -->
-       <div class="col-8 d-flex-flex">
-         <a href="index.html" class="app-brand-link">
+    .btn-custom:hover {
+        color: rgba(197, 219, 31);
+        text-decoration: underline;
+    }
+</style>
 
-           <!-- Logo zouti -->
-           <img _ngcontent-lvh-c121="" class="logo" src="https://content.pay.zouti.com.br/tenants/pay.zouti.com.br/logo.png">
-         </a>
-       </div>
-       <!-- /Search -->
+<div class="">
+    <div class="container mt-4">
+        <h2>Lista de Clientes</h2>
 
-       <ul class="navbar-nav flex-row align-items-center ms-auto">
+        <div class="d-flex justify-content-between align-items-center mb-3">
+            <a href="/clientes/registar_cliente" class="btn btn-custom">Adicionar Cliente</a>
+            <a href="#" class="btn btn-custom">Produto</a>
+            <a href="#" class="btn btn-custom">Pix</a>
+            <a href="#" class="btn btn-custom">Boletos</a>
+            <a href="#" class="btn btn-custom">Chargebacks</a>
+            <a href="@" class="btn btn-custom">tickets</a>
+            <a href="/ordens/listar_ordem" class="btn btn-custom">ordens</a>
+            <a href="#" class="btn btn-custom">Pedidos</a>
+            <a href="#" class="btn btn-custom">Vendas</a>
+        </div>
 
-         <!-- User -->
-         <li class="nav-item navbar-dropdown dropdown-user dropdown">
-           <a class="nav-link dropdown-toggle hide-arrow" href="javascript:void(0);" data-bs-toggle="dropdown">
-             <div class="avatar avatar-online">
-               <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-             </div>
-           </a>
-           <ul class="dropdown-menu dropdown-menu-end">
-             <li>
-               <a class="dropdown-item" href="pages-account-settings-account.html">
-                 <div class="d-flex">
-                   <div class="flex-shrink-0 me-3">
-                     <div class="avatar avatar-online">
-                       <img src="../../assets/img/avatars/1.png" alt class="h-auto rounded-circle" />
-                     </div>
-                   </div>
-                   <div class="flex-grow-1">
-                     <span class="fw-medium d-block">John Doe</span>
-                     <small class="text-muted">Admin</small>
-                   </div>
-                 </div>
-               </a>
-             </li>
-             <li>
-               <div class="dropdown-divider"></div>
-             </li>
-             <li>
-               <a class="dropdown-item" href="pages-profile-user.html">
-                 <i class="ti ti-user-check me-2 ti-sm"></i>
-                 <span class="align-middle">My Profile</span>
-               </a>
-             </li>
-             <li>
-               <a class="dropdown-item" href="pages-account-settings-account.html">
-                 <i class="ti ti-settings me-2 ti-sm"></i>
-                 <span class="align-middle">Settings</span>
-               </a>
-             </li>
-             <li>
-               <a class="dropdown-item" href="pages-account-settings-billing.html">
-                 <span class="d-flex align-items-center align-middle">
-                   <i class="flex-shrink-0 ti ti-credit-card me-2 ti-sm"></i>
-                   <span class="flex-grow-1 align-middle">Billing</span>
-                   <span class="flex-shrink-0 badge badge-center rounded-pill bg-label-danger w-px-20 h-px-20"
-                     >2</span
-                   >
-                 </span>
-               </a>
-             </li>
-             <li>
-               <div class="dropdown-divider"></div>
-             </li>
-             <li>
-               <a class="dropdown-item" href="pages-faq.html">
-                 <i class="ti ti-help me-2 ti-sm"></i>
-                 <span class="align-middle">FAQ</span>
-               </a>
-             </li>
-             <li>
-               <a class="dropdown-item" href="pages-pricing.html">
-                 <i class="ti ti-currency-dollar me-2 ti-sm"></i>
-                 <span class="align-middle">Pricing</span>
-               </a>
-             </li>
-             <li>
-               <div class="dropdown-divider"></div>
-             </li>
-             <li>
-               <a class="dropdown-item" href="auth-login-cover.html" target="_blank">
-                 <i class="ti ti-logout me-2 ti-sm"></i>
-                 <span class="align-middle">Log Out</span>
-               </a>
-             </li>
-           </ul>
-         </li>
-         <!--/ User -->
-         <li>
-           <span class="d-none d-md-inline d-lg-inline">
-             {{ Auth::user()->name }}
-           </span>
-         </li>
-       </ul>
-     </div>
+        <table class="table table-bordered mt-3">
+            <thead>
+                <tr>
+                    <th scope="col">Abreviação</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">E-mail</th>
+                    <th scope="col">Sexo</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($clientes as $cliente)
+                <tr>
+                    <td>{{ $cliente['abreviacao'] }}</td>
+                    <td>{{ $cliente['nome'] }}</td>
+                    <td>{{ $cliente['email'] }}</td>
+                    <td>
+                        @if($cliente['sexo'] == 1)
+                            Homem
+                        @elseif($cliente['sexo'] == 0)
+                            Mulher
+                        @else
+                            <!-- Se o valor não for nem 0 nem 1, exiba algo diferente -->
+                            Valor inválido
+                        @endif
+                    </td>
+                </tr>
+                @endforeach
 
-     <!-- Search Small Screens -->
-     <div class="navbar-search-wrapper search-input-wrapper d-none">
-       logo
-     </div>
-   </nav>
-   <!-- / Navbar -->
-
-<div class="container mt-5">
-  <h2>Lista de Clientes</h2>
-
-  <div class="d-flex justify-content-between align-items-center mb-3">
-    <a href="/clientes/registar_cliente" class="btn btn-primary">Adicionar Cliente</a>
-    <a href="/produtos/listar_produtos" class="btn btn-primary">Produto</a>
-    <a href="/pix/listar_pix" class="btn btn-primary">Pix</a>
-    <a href="/boletos/listar_boletos" class="btn btn-primary">Boletos</a>
-    <a href="/chargebacks/listar_chargebacks" class="btn btn-primary">Chargebacks</a>
-    <a href="/tickets/listar_tickets" class="btn btn-primary">tickets</a>
-    <a href="/ordens/listar_ordens" class="btn btn-primary">ordens</a>
-    <a href="/ordens/listar_ordem" class="btn btn-primary">Pedidos</a>
-    <a href="/vendas/listar_vendas" class="btn btn-primary">Vendas</a>
+                <!-- Adicione mais linhas conforme necessário -->
+            </tbody>
+        </table>
+    </div>
 </div>
 
-  <table class="table table-bordered mt-3">
-    <thead>
-      <tr>
-        <th scope="col">Abreviação</th>
-        <th scope="col">Nome</th>
-        <th scope="col">E-mail</th>
-        <th scope="col">Sexo</th>
-      </tr>
-    </thead>
-    <tbody>
-        @foreach($clientes as $cliente)
-        <tr>
-            <td>{{ $cliente['abreviacao'] }}</td>
-            <td>{{ $cliente['nome'] }}</td>
-            <td>{{ $cliente['email'] }}</td>
-            <td>
-                @if($cliente['sexo'] == 1)
-                    Homem
-                @elseif($cliente['sexo'] == 0)
-                    Mulher
-                @else
-                    <!-- Se o valor não for nem 0 nem 1, exiba algo diferente -->
-                    Valor inválido
-                @endif
-            </td>
-        </tr>
-    @endforeach
-
-      <!-- Adicione mais linhas conforme necessário -->
-    </tbody>
-  </table>
-
 @endsection
+
+</body>
+</html>

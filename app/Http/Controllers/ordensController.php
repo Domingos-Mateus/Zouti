@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 use App\Models\Ordens;
 use App\Models\Produtos;
 use App\Models\Transacoes;
+use App\Models\User;
 
 class ordensController extends Controller
 {
@@ -21,7 +22,8 @@ class ordensController extends Controller
         //
         $ordens = Ordens::all();
         //return $ordens;
-        return view('ordens/listar_ordem', compact('ordens'));
+        $usuarios = User::selectRaw('LEFT(name, 1) as primeiro_caractere')->first();
+        return view('ordens/listar_ordem', compact('ordens','usuarios'));
     }
 
     /**
@@ -32,7 +34,9 @@ class ordensController extends Controller
     public function create()
     {
         //
-        return view('ordens/registar_ordem');
+        $usuarios = User::selectRaw('LEFT(name, 1) as primeiro_caractere')->first();
+        return view('ordens/registar_ordem', compact('usuarios'));
+        //return view('ordens/registar_ordem');
     }
 
 
