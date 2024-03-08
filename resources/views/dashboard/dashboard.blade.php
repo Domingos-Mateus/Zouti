@@ -42,7 +42,7 @@
                                     Total em Vendas
                                 </div>
                                 <div>
-                                    <span style="font-size: 20px; font-weight: 600;">R$ 142.839,37</span>
+                                    <span style="font-size: 20px; font-weight: 600;">R$ {{$total_vendas}}</span>
                                     <span class="arrow-up"></span>
                                 </div>
                             </div>
@@ -51,7 +51,7 @@
                                     Pedidos pagos
                                 </div>
                                 <div>
-                                    <span style="font-size: 20px; font-weight: 600;">R$ 0,00</span>
+                                    <span style="font-size: 20px; font-weight: 600;">R$ {{$vendas_pagas}}</span>
                                     <span class="arrow-up"></span>
                                 </div>
                             </div>
@@ -103,7 +103,7 @@
                         </div>
                         <div class="col-4 text-end">
                           <p class="mb-2 mt-3 mb-2">
-                            <span style="font-size: 14px;"><b>000%</b></span>
+                            <span style="font-size: 14px;"><b>{{$porcentagem_cartao_inteiro}}%</b></span>
                           </p>
                         </div>
                         <div class="col-8">
@@ -116,7 +116,7 @@
                         </div>
                         <div class="col-4 text-end">
                           <p class="my-2 mt-3">
-                            <span style="font-size: 14px;"><b>0%</b></span>
+                            <span style="font-size: 14px;"><b>{{$porcentagem_boleto_inteiro}}%</b></span>
                           </p>
                         </div>
                         <div class="col-8">
@@ -129,7 +129,7 @@
                         </div>
                         <div class="col-4 text-end">
                           <p class="my-3">
-                            <span style="font-size: 14px;"><b>0%</b></span>
+                            <span style="font-size: 14px;"><b>{{$porcentagem_PIX_inteiro}}%</b></span>
                           </p>
                         </div>
                         <div style="padding-bottom: 7px;"></div>
@@ -153,7 +153,7 @@
                          <p class="m-0" style="font-size: 14px; opacity: 0.4;">Valor em vendas no periodo</p>
 
                          <h2 style="font-size: 22px; font-weight: 600; margin-top: 20px;">
-                           R$ 0,00
+                           R$ {{$vendas_cartao}}
                          </h2>
 
                          <p class="m-0" style="font-size: 14px; opacity: 0.4;">Aumente suas vendas no cartão aplicando descontos e incentivos.</p>
@@ -161,7 +161,7 @@
                         </div>
                         <div class="col-5 col-lg-4 text-end">
                           <div>
-                            <div class="chart-progress2 custom-green" data-series="72" data-progress_variant="true"></div>
+                            <div class="chart-progress2 custom-green" data-series="{{$porcentagem_cartao_inteiro}}" data-progress_variant="true"></div>
                           </div>
                         </div>
 
@@ -188,7 +188,7 @@
                                     <div class="col-6 text-end">
                                       <p class="m-0" >
                                         <span style="background-color: rgba(186, 206, 28,0.2); color: rgba(186, 206, 28,1);" class="rounded-3 text-13 p-1 px-3">
-                                          0%
+                                          {{$porcentagem_PIX_inteiro}}%
                                         </span>
                                       </p>
                                     </div>
@@ -196,18 +196,18 @@
                     <div class="">
                       <div class="row">
                         <div class="col-6">
-                          <h4 class="m-0 text-21" style="font-weight: 600; padding: 15px 0;">R$ 0,00</h4>
+                          <h4 class="m-0 text-21" style="font-weight: 600; padding: 15px 0;">R$ {{$vendas_pix}}</h4>
                         </div>
                         <div>
                           <div class="col-12 my-3 rounded-3" style="height: 8px; background-color: rgba(186, 206, 28,0.2);">
-                            <div class="my-3 rounded-3" style="height: 8px; background-color: rgba(186, 206, 28,1); width: 80%;">
+                            <div class="my-3 rounded-3" style="height: 8px; background-color: rgba(186, 206, 28,1); width: {{$porcentagem_PIX_inteiro}}%;">
                               <!-- grafico volume-->
                             </div>
                           </div>
                         </div>
                         <div class="col-12">
                           <p class="m-0 text-11">
-                            Volume total: <b>R$ 0,00</b>
+                            Volume total: <b>R$ {{$total_vendas}}</b>
                           </p>
                         </div>
 
@@ -241,14 +241,14 @@
                         </div>
                         <div>
                           <div class="col-12 my-3 rounded-3" style="height: 8px; background-color: rgba(186, 206, 28,0.2);">
-                            <div class="my-3 rounded-3" style="height: 8px; background-color: rgba(186, 206, 28,1); width: 80%;">
+                            <div class="my-3 rounded-3" style="height: 8px; background-color: rgba(186, 206, 28,1); width: {{$porcentagem_boleto_inteiro}}%;">
                               <!-- grafico volume-->
                             </div>
                           </div>
                         </div>
                         <div class="col-12">
                           <p class="m-0 text-11" >
-                            Volume total: <b>R$ 0,00</b>
+                            Volume total: <b>R$ {{$total_vendas}}</b>
                           </p>
                         </div>
 
@@ -275,7 +275,7 @@
                     <div>
                       <ul class="p-0 m-0" style="position: relative; height: 405px;">
                         <li class="d-flex" style="position: absolute; top: -10px;">
-                          <div class="chart-progress me-3 custom-green" data-series="{{$boletos}}" data-progress_variant="true"></div>
+                          <div class="chart-progress me-3 custom-green" data-series="{{$porcentagem_boleto_inteiro}}" data-progress_variant="true"></div>
 
                           <div class="row w-100 align-items-center">
                             <div class="col-9">
@@ -287,7 +287,7 @@
                           </div>
                         </li>
                         <li class="d-flex" style="position: absolute; top: 95px;">
-                          <div class="chart-progress me-3 custom-green" data-series="{{$pixs}}" data-progress_variant="true"></div>
+                          <div class="chart-progress me-3 custom-green" data-series="{{$porcentagem_PIX_inteiro}}" data-progress_variant="true"></div>
                           <div class="row w-100 align-items-center">
                             <div class="col-11">
                               <div class="me-2">

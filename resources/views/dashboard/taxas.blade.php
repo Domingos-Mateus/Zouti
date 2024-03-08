@@ -51,6 +51,15 @@
     @extends('dashboard.template')
 
 @section('conteudo')
+<style>
+
+
+    .card-pay {
+        background-image: url('../../assets/img/banner-taxas.png');
+        background-size: cover;
+        background-position: 10%;
+    }
+</style>
     <!-- Layout wrapper -->
     <div class="layout-wrapper layout-content-navbar">
       <div class="layout-container">
@@ -69,28 +78,27 @@
             <!-- Content -->
 
             <div class="container-xxl flex-grow-1 container-p-y p-0 m-0">
-              <div class="col-12 mb-2 order-1 order-xxl-3">
-                <div class="card h-100" style="border-radius: 30px; background-color: orange;">
-                  <div class="card-header d-flex align-items-center justify-content-between position-relative">
-                    <div>
-                      <div class="row">
-                          <h4 class="m-0">Pagamentos</h4>
-                          <h4>e Taxas</h4>
-                      </div>
-                      <div>
-                        <button class="btn" style="border: 1px solid #000;">
-                          Veja Abaixo
-                        </button>
-                      </div>
-                    </div>
+                <div class="col-12 mb-2 order-1 order-xxl-3">
+                    <div class="card h-100 card-pay" style="border-radius: 30px; background-color: orange;">
+                      <div class="invisible card-header d-flex align-items-center justify-content-between position-relative">
+                        <div>
+                          <div class="row">
+                              <h4 class="m-0">Pagamentos</h4>
+                              <h4>e Taxas</h4>
+                          </div>
+                          <div>
+                            <button class="btn" style="border: 1px solid #000;">
+                              Veja Abaixo
+                            </button>
+                          </div>
+                        </div>
 
-                    <div style="position: absolute; top: 50%; right: 30px;">
-                      <h3>ZoutiPay</h3>
+                        <div style="position: absolute; top: 50%; right: 30px;">
+                          <h3>ZoutiPay</h3>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
               <div >
                 <h5 class="m-0 py-4">Meios de Pagamento</h5>
               </div>
