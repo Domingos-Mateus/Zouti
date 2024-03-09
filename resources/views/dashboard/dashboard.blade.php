@@ -24,12 +24,14 @@
                             <div class="col-lg-6">
                               <!-- Calendario -->
                               <div class="flex-flex">
-                                <div style="background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.1); text-align: center; width: 240px; padding: 5px 0;">
+                                <div style="background: #fff; border-radius: 20px; border: 1px solid rgba(0,0,0,0.1); text-align: center; width: 260px !important; padding: 5px 0;">
                                   <span>
                                     <img src="../icons/calendario.png" width="15">
                                   </span>
-                                  <input type="text" id="demo" style="font-size: 13.3px; background: none; border: none; width: 180px; padding: 0 10px;"/>
-                                  <i class="fa fa-user"></i>
+                                  <input type="text" id="demo1" style="font-size: 13.3px; background: none; border: none; width: 190px !important; padding: 0 10px;"/>
+                                  <span>
+                                    <img src="../icons/seta.png" width="18" style="transform: rotate(90deg);">
+                                  </span>
                                 </div>
                               </div>
                             </div>
@@ -410,6 +412,64 @@
             </div>
         </div>
     </div>
+
+
+
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+
+   <script>
+$('#demo1').daterangepicker({
+    "autoApply": true,
+    "startDate": "01/03/2024",
+    "endDate": "07/03/2024",
+    "locale": {
+        "format": "DD MMM YYYY",
+        "separator": " - ",
+        "applyLabel": "Aplicar",
+        "cancelLabel": "Cancelar",
+        "fromLabel": "De",
+        "toLabel": "Para",
+        "customRangeLabel": "Intervalo personalizado",
+        "daysOfWeek": [
+            "Dom",
+            "Seg",
+            "Ter",
+            "Qua",
+            "Qui",
+            "Sex",
+            "Sáb"
+        ],
+        "monthNames": [
+            "Janeiro",
+            "Fevereiro",
+            "Março",
+            "Abril",
+            "Maio",
+            "Junho",
+            "Julho",
+            "Agosto",
+            "Setembro",
+            "Outubro",
+            "Novembro",
+            "Dezembro"
+        ],
+        "firstDay": 1
+    }
+}, function(start, end, label) {
+  console.log('Novo intervalo de datas selecionado: ' + start.format('YYYY-MM-DD') + ' até ' + end.format('YYYY-MM-DD') + ' (intervalo predefinido: ' + label + ')');
+});
+
+</script>
+
+    <script type="text/javascript">
+      function toggleSidebar() {
+        document.getElementById('sidebar').classList.toggle("toggle_sidebar")
+        document.getElementById('fundo').classList.toggle("d-none")
+
+      }
+    </script>
 
     <br><br><br><br><br><br><br>    <br><br><br><br><br><br>
     @endsection

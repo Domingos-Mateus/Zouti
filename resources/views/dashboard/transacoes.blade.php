@@ -66,7 +66,7 @@
 
               <div>
                 <div style="overflow-x: auto; white-space: nowrap;">
-                    <!--
+
     <ul class="filter-select" style="list-style: none; padding: 0; margin: 0;">
         <li>
             <select class="form-select filter mb-3">
@@ -105,7 +105,6 @@
         </li>
     </ul>
 
-    -->
 </div>
 
 

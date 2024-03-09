@@ -422,5 +422,57 @@ if (chartProgressList2) {
 
 <!-- Page JS -->
 <script src="../../assets/js/charts-chartjs.js"></script>
+
+<script>
+    $('#demo').daterangepicker({
+        "autoApply": true,
+        "startDate": "01/03/2024",
+        "endDate": "07/03/2024",
+        "locale": {
+            "format": "DD MMM YYYY",
+            "separator": " - ",
+            "applyLabel": "Aplicar",
+            "cancelLabel": "Cancelar",
+            "fromLabel": "De",
+            "toLabel": "Para",
+            "customRangeLabel": "Intervalo personalizado",
+            "daysOfWeek": [
+                "Dom",
+                "Seg",
+                "Ter",
+                "Qua",
+                "Qui",
+                "Sex",
+                "Sáb"
+            ],
+            "monthNames": [
+                "Janeiro",
+                "Fevereiro",
+                "Março",
+                "Abril",
+                "Maio",
+                "Junho",
+                "Julho",
+                "Agosto",
+                "Setembro",
+                "Outubro",
+                "Novembro",
+                "Dezembro"
+            ],
+            "firstDay": 1
+        }
+    }, function(start, end, label) {
+      console.log('Novo intervalo de datas selecionado: ' + start.format('YYYY-MM-DD') + ' até ' + end.format('YYYY-MM-DD') + ' (intervalo predefinido: ' + label + ')');
+    });
+
+    </script>
+
+        <script type="text/javascript">
+          function toggleSidebar() {
+            document.getElementById('sidebar').classList.toggle("toggle_sidebar")
+            document.getElementById('fundo').classList.toggle("d-none")
+
+          }
+        </script>
 </body>
 </html>
